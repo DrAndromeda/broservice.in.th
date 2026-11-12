@@ -147,37 +147,60 @@ h1 { font-size: 170%; }
 }
 </style><script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@type": "FAQPage",
-"mainEntity": [
-{"@type":"Question","name":"What services does BroService offer?","acceptedAnswer":{"@type":"Answer","text":"We offer plumbing, electrical, AC, cleaning, water delivery, bike repair, handyman, and property services across Koh Phangan."}},
-{"@type":"Question","name":"How do I contact BroService?","acceptedAnswer":{"@type":"Answer","text":"Call +66 80-870-5704, WhatsApp, Telegram or email. Available 8AM-8PM daily."}},
-{"@type":"Question","name":"Do you offer water delivery on Koh Phangan?","acceptedAnswer":{"@type":"Answer","text":"Yes, 19L bottles delivered to your villa or condo. Scheduled delivery available."}},
-{"@type":"Question","name":"Do you guarantee your work?","acceptedAnswer":{"@type":"Answer","text":"Yes, all work comes with a warranty. If something isn't right, we'll come back and fix it at no extra cost."}},
-{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"We accept cash, bank transfer, and PromptPay. Payment is due after the work is completed to your satisfaction."}},
-{"@type":"Question","name":"Do you provide same-day service?","acceptedAnswer":{"@type":"Answer","text":"Yes, most jobs in Thong Sala and Srithanu are same-day. Other areas are usually same-day to next-day depending on distance."}},
-{"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"All of Koh Phangan — Thong Sala, Srithanu, Haad Rin, Chaloklum, Baan Tai and surrounding areas."}},
-{"@type":"Question","name":"Do you work on weekends?","acceptedAnswer":{"@type":"Answer","text":"Yes, we're available 7 days a week, 8AM–8PM, including weekends and holidays."}},
-{"@type":"Question","name":"Can I order water regularly?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can set up a weekly or bi-weekly recurring water delivery so you never run out."}},
-{"@type":"Question","name":"Can you come to Haad Rin?","acceptedAnswer":{"@type":"Answer","text":"Yes, Haad Rin is fully covered. Response is usually same-day to next-day, with longer waits possible around Full Moon Party dates."}},
-{"@type":"Question","name":"Do you speak Thai?","acceptedAnswer":{"@type":"Answer","text":"Yes, our team speaks English, Russian and Thai."}}
-]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What services do you provide?","acceptedAnswer":{"@type":"Answer","text":"Plumbing, electrical, AC, cleaning, water delivery, bike repair, handyman, phone repair and property assistance — island-wide."}},
+    {"@type":"Question","name":"Do you offer same-day service?","acceptedAnswer":{"@type":"Answer","text":"Yes, for many jobs depending on location, schedule and the type of work required."}},
+    {"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Thong Sala, Srithanu, Haad Rin, Baan Tai, Chaloklum and surrounding areas."}},
+    {"@type":"Question","name":"Can I send photos before booking?","acceptedAnswer":{"@type":"Answer","text":"Yes. Photos or a video help us understand the problem fast."}},
+    {"@type":"Question","name":"Do you work on weekends?","acceptedAnswer":{"@type":"Answer","text":"Yes. Service is available 7 days a week."}},
+    {"@type":"Question","name":"What languages do you speak?","acceptedAnswer":{"@type":"Answer","text":"English, Russian and Thai."}}
+  ]
 }
 </script>
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@type": "LocalBusiness",
-"name": "BroService",
-"url": "https://broservice.in.th/",
-"telephone": "+66808705704",
-"areaServed": ["Thong Sala","Srithanu","Haad Rin","Chaloklum","Baan Tai","Koh Phangan"],
-"address": {
-"@type": "PostalAddress",
-"addressLocality": "Koh Phangan",
-"addressRegion": "Surat Thani",
-"addressCountry": "TH"
-}
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://broservice.in.th/#localbusiness",
+  "name": "BroService",
+  "url": "https://broservice.in.th/",
+  "telephone": "+66808705704",
+  "email": "info@broservice.in.th",
+  "description": "Home and property services on Koh Phangan, including water delivery, cleaning, plumbing, air-conditioning service, bike repair, handyman work, electrical services and phone and technology repair.",
+  "areaServed": [
+    {"@type": "Place", "name": "Koh Phangan"},
+    {"@type": "Place", "name": "Thong Sala"},
+    {"@type": "Place", "name": "Srithanu"},
+    {"@type": "Place", "name": "Haad Rin"},
+    {"@type": "Place", "name": "Baan Tai"},
+    {"@type": "Place", "name": "Chaloklum"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Koh Phangan",
+    "addressRegion": "Surat Thani",
+    "addressCountry": "TH"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "https://schema.org/Monday",
+      "https://schema.org/Tuesday",
+      "https://schema.org/Wednesday",
+      "https://schema.org/Thursday",
+      "https://schema.org/Friday",
+      "https://schema.org/Saturday",
+      "https://schema.org/Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "20:00"
+  }],
+  "sameAs": [
+    "https://facebook.com/broservice.kohphangan",
+    "https://instagram.com/broservice_kohphangan"
+  ]
 }
 </script>
 <script>function goHome(){window.location.href="./";}</script>
@@ -480,9 +503,7 @@ h1 { font-size: 170%; }
 <div><a href="https://wa.me/66808705704" style="background:#25D366;color:#fff;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:700;text-decoration:none;">💬 WhatsApp</a> <a href="https://t.me/BroService_kpg_bot" style="background:#229ED9;color:#fff;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:700;text-decoration:none;margin-left:8px;">✈️ Telegram</a></div>
 </div>
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"BroService Koh Phangan","url":"https://broservice.in.th","telephone":"+66808705704"}
-</script>
+
 </div>
 </div>
 <footer>
