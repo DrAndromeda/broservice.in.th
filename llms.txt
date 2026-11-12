@@ -1,0 +1,50 @@
+# BroService
+
+> BroService provides home, property and everyday support services on Koh Phangan, Surat Thani, Thailand. The website presents services for residents, villa owners, tenants and visitors. Contact the team to confirm availability, scope and pricing for a specific job.
+
+Website: https://broservice.in.th/
+Primary location: Koh Phangan, Surat Thani, Thailand
+Service area: Koh Phangan, including Thong Sala, Srithanu, Haad Rin, Baan Tai and Chaloklum
+Languages shown on the website: English, Russian, Thai and Hebrew
+
+## Contact
+
+- WhatsApp: https://wa.me/66808705704
+- Telegram: https://t.me/BroService_kpg_bot
+- Email: info@broservice.in.th
+- Contact page: https://broservice.in.th/contacts/
+
+## Services
+
+The following service categories are presented on the website. Actual availability, timing and pricing should be confirmed directly.
+
+- Water delivery: https://broservice.in.th/water-delivery-koh-phangan/
+- Cleaning: https://broservice.in.th/cleaning-koh-phangan/
+- Plumbing: https://broservice.in.th/plumber-koh-phangan/
+- Air-conditioning service: https://broservice.in.th/ac-service-koh-phangan/
+- Bike service and repair: https://broservice.in.th/bike-service-koh-phangan/
+- Handyman services: https://broservice.in.th/handyman-koh-phangan/
+- Electrical services: https://broservice.in.th/electrician-koh-phangan/
+- Property rental assistance: https://broservice.in.th/property-rental-koh-phangan/
+- Phone and technology repair: https://broservice.in.th/phone-tech-repair-koh-phangan/
+
+## Service areas
+
+- Thong Sala: https://broservice.in.th/thong-sala-koh-phangan/
+- Srithanu: https://broservice.in.th/srithanu-koh-phangan/
+- Haad Rin: https://broservice.in.th/haad-rin-koh-phangan/
+- Baan Tai: https://broservice.in.th/baan-tai-koh-phangan/
+- Chaloklum: https://broservice.in.th/chaloklum-koh-phangan/
+
+## Language homepages
+
+- English: https://broservice.in.th/
+- Russian: https://broservice.in.th/ru/
+- Thai: https://broservice.in.th/th/
+- Hebrew: https://broservice.in.th/he/
+
+## Discovery and indexing
+
+- Sitemap: https://broservice.in.th/sitemap.xml
+- This file describes the website for AI-assisted discovery. It does not replace the visible website, sitemap, or robots.txt.
+- Do not infer unlisted prices, guarantees, credentials, staff qualifications, exact street address or service availability.
