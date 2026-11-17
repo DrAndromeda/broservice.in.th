@@ -28,218 +28,140 @@
     <style>
 :root {
     --primary: #e88800;
-    --primaryLight: rgba(232,136,0,0.12);
-    --primary-hover: #d07a00;
-    --darker: #1a1a2e;
-    --bg: #f5f0eb;
-    --cardBg: #fff;
-    --text: #333;
-    --textLight: #666;
-    --border: #ddd;
-    --accent: #e88800;
-    --shadow: 0 4px 20px rgba(0,0,0,0.08);
-    --radius: 12px;
-    --radius-sm: 8px;
+    --primary-dark: #c47000;
+    --dark: #1a1414;
+    --dark2: #2b2424;
+    --darker: #1f1919;
+    --bg: #edeef0;
+    --text-light: #8f8b8c;
+    --white: #fff;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Open Sans', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-h1, h2, h3, h4 { font-family: 'Inter', 'Open Sans', Arial, sans-serif; font-weight: 700; line-height: 1.2; }
-h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--darker); margin-bottom: 6px; letter-spacing: -0.3px; }
-h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); color: var(--darker); margin: 28px 0 12px; letter-spacing: -0.2px; border-left: 4px solid var(--primary); padding-left: 12px; }
-h3 { font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--darker); margin: 20px 0 8px; }
-p { margin-bottom: 14px; color: var(--text); font-size: 15px; }
-ul, ol { margin: 8px 0 16px 22px; }
-li { margin-bottom: 6px; font-size: 15px; color: var(--text); }
-a { color: var(--primary); text-decoration: none; }
-a:hover { text-decoration: underline; color: var(--primary-hover); }
-img { max-width: 100%; height: auto; display: block; border-radius: var(--radius-sm); margin: 10px auto; }
-.container { max-width: 960px; margin: 0 auto; padding: 20px; }
-#content { text-align: center; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #000; background: var(--dark); line-height: 1.65; font-size: 16px; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 15px; }
+a { text-decoration: none; color: var(--primary); }
+a:hover { text-decoration: none; }
+header { background: linear-gradient(180deg, var(--dark2), var(--darker)); padding: 4px 0 0; position: sticky; top: 0; z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 0 2px; }
+.logo { font-family: Inter, sans-serif; font-size: 22px; font-weight: 700; color: var(--primary); text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+.logo span { color: #d3d3d3; font-weight: 300; }
+.header-right { display: flex; align-items: center; gap: 8px; }
+.header-phone { font-size: 16px; font-weight: bold; }
+.header-phone a { color: #e88800; font-weight: bold; }
+.social-icons { display: flex; gap: 3px; }
+.social-icons a { display: inline-block; transition: opacity 0.2s; }
+.social-icons a:hover { opacity: 0.7; }
+.social-icons svg { width: 22px; height: 22px; border-radius: 50%; display: block; }
+nav { background: linear-gradient(180deg, #e57c00, #c47000); border-radius: 6px 6px 0 0; margin-top: 4px; }
+ul.menu { display: flex; justify-content: center; flex-wrap: nowrap; list-style: none; padding: 4px 4px; }
+ul.menu li { display: inline-block; line-height: 16px; margin: 2px 1px; padding: 4px 6px; border-radius: 5px; transition: background 0.2s; }
+ul.menu li:hover { background: rgba(0,0,0,0.08); }
+ul.menu li a { font-size: 13px; line-height: 16px; color: #1f1919; font-weight: 600; white-space: nowrap; }
+ul.menu li a:hover { color: #fff; }
+ul.menu li.active { background: rgba(0,0,0,0.1); }
+ul.menu li.active a { color: #fff; }
+.breadcrumbs { background: var(--bg); padding: 6px 0; font-size: 13px; color: #888; }
+.breadcrumbs a { color: var(--primary); }
+#content { background: var(--bg); padding: 20px 0 25px; text-align: center; }
 #content p, #content li, #content .justifyfull { text-align: left; max-width: 700px; margin: 10px auto; }
 #content ul { display: inline-block; text-align: left; max-width: 600px; padding-left: 35px; }
-#content h2 { text-align: center; }
+#content h1 { font-family: Inter, sans-serif; font-size: 28px; font-weight: 700; color: #1f1919; margin-bottom: 14px; }
+#content h2 { font-family: Inter, sans-serif; font-size: 22px; font-weight: 600; color: #1f1919; margin: 18px 0 8px; border-left: 4px solid var(--primary); padding-left: 12px; text-align: center; }
+#content h3 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; color: var(--primary); margin: 16px 0 6px; text-align: center; }
+#content p { margin: 10px 0; color: #444; line-height: 1.65; }
+#content .justifyfull { text-align: justify; }
+#content ul { margin: 10px 0 16px; padding-left: 20px; list-style: none; }
+#content ul li { margin: 5px 0; padding-left: 20px; position: relative; }
+#content ul li::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+#content table { margin: 15px auto !important; }
+#content .faq-item { text-align: left; max-width: 700px; margin: 0 auto; }
+.float-img { float: right; margin: 0 0 15px 20px; border-radius: 8px; max-width: 40%; }
+img { max-width: 100%; height: auto; border-radius: 7px; }
+#content img { max-width: 100%; height: auto; max-height: 400px; object-fit: contain; }
+.cta-block { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); padding: 24px 20px; border-radius: 10px; text-align: center; margin: 20px 0; }
+.cta-block h2 { color: var(--white) !important; font-size: 24px !important; border: none !important; padding: 0 !important; margin-bottom: 10px !important; }
+.cta-block .phone { font-size: 28px; font-weight: 700; margin: 10px 0; }
+.cta-block .phone a { color: var(--white); }
+.cta-block .hours { font-size: 14px; opacity: 0.9; }
+footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-bottom: 20px; }
+.footer-col h4 { font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+.footer-col p { font-size: 13px; line-height: 1.5; color: #aaa; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 6px; }
+.footer-links a { font-size: 13px; color: #aaa; }
+.footer-links a:hover { color: var(--primary); }
+.footer-social { display: flex; gap: 6px; margin-top: 10px; }
+.footer-social a:hover { opacity: 0.7; }
+.footer-social svg { width: 22px; height: 22px; border-radius: 50%; }
+.footer-bottom { border-top: 1px solid #333; padding-top: 15px; text-align: center; font-size: 13px; color: #888; }
+.footer-bottom a { color: var(--primary); }
+    @media only screen and (max-width: 768px) {
+        .header-right { flex-direction: column; gap: 5px; }
+        #content h1 { font-size: 22px; }
+        #content h2 { font-size: 18px; }
+        .float-img { float: none; margin: 0 auto 15px; max-width: 100%; }
+        .footer-grid { grid-template-columns: 1fr; padding: 0 15px; gap: 10px; }
+        .header-inner { flex-direction: column; text-align: center; }
+    }
 
-/* Price Table */
-.price-table { border-collapse: collapse; width: 100%; max-width: 700px; margin: 16px auto; font-size: 14px; }
-.price-table th { background: var(--primary); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
-.price-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; }
-.price-table tr:nth-child(even) { background: #fafafa; }
-.price-table tr:hover { background: var(--primaryLight); }
-.price-table .price { font-weight: 700; color: var(--primary); white-space: nowrap; }
-
-/* Header */
-.top-header { background: var(--darker); color: #fff; padding: 6px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; position: sticky; top: 0; z-index: 100; }
-.top-header a { color: #e88800; margin-left: 10px; }
-.top-header a:hover { color: #ffa500; }
-.top-header .langs a { color: #ccc; margin-left: 8px; font-size: 11px; text-transform: uppercase; }
-.top-header .langs a:hover { color: #e88800; }
-.header { background: var(--cardBg); border-bottom: 1px solid var(--border); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
-.header .logo { font-family: 'Inter', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--primary); letter-spacing: -0.5px; display: flex; align-items: center; gap: 6px; }
-.header .logo span { color: var(--darker); }
-.header .logo svg { width: 28px; height: 28px; }
-.header nav { display: flex; gap: 10px; align-items: center; }
-.header nav a { padding: 6px 12px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; color: var(--text); }
-.header nav a:hover { background: var(--primaryLight); color: var(--primary); text-decoration: none; }
-.header nav .cta-btn { background: var(--primary); color: #fff; padding: 8px 16px; border-radius: var(--radius-sm); font-weight: 600; font-size: 13px; }
-.header nav .cta-btn:hover { background: var(--primary-hover); text-decoration: none; }
-.mobile-menu-btn { display: none; background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; cursor: pointer; font-size: 18px; color: var(--darker); }
-@media (max-width: 768px) {
-    .header nav { display: none; }
-    .mobile-menu-btn { display: block; }
-    .top-header .langs span { display: none; }
-    .container { padding: 12px; }
-    #content ul { padding-left: 24px; }
+.usp-bar { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; background:#fff; padding:12px 15px; margin:0; border-bottom:3px solid var(--primary); font-size:13px; color:#333; font-weight:600; }
+.usp-bar span { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+.sticky-cta-bar { display:none; }
+@media only screen and (max-width: 768px) {
+    .sticky-cta-bar { display:flex; position:fixed; bottom:0; left:0; right:0; z-index:200; box-shadow:0 -2px 12px rgba(0,0,0,0.18); }
+    .sticky-cta-bar a { flex:1; text-align:center; padding:13px 0; font-size:14px; font-weight:700; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .sticky-cta-bar .cta-whatsapp { background:#25D366; color:#fff; }
+    .sticky-cta-bar .cta-telegram { background:#0088cc; color:#fff; }
+    body { padding-bottom: 52px; }
+    .usp-bar { font-size:11px; gap:6px 12px; padding:8px 10px; }
 }
+.related-services { max-width:960px; margin:0 auto; padding:25px 15px; background:var(--bg); }
+.related-services h2 { font-family: Inter, sans-serif; font-size:20px; font-weight:600; color:#1f1919; text-align:center; margin-bottom:14px; }
+.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.related-grid a { display:block; background:#fff; border-radius:8px; padding:16px 10px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,0.08); color:#1f1919; font-weight:600; font-size:14px; transition:transform .15s; }
+.related-grid a:hover { transform:translateY(-3px); text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.12); }
+.related-grid .emoji { display:block; font-size:26px; margin-bottom:6px; }
+@media only screen and (max-width:768px) { .related-grid { grid-template-columns:1fr 1fr; } }
 
-/* Footer */
-footer { background: var(--darker); color: #ccc; padding: 20px 0; margin-top: 40px; }
-footer > .container { max-width: 960px; margin: 0 auto; }
-footer a { color: #e88800; }
-footer a:hover { text-decoration: underline; }
-.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; text-align: left; margin-bottom: 20px; }
-.footer-col h4 { color: #e88800; margin-bottom: 10px; font-size: 15px; }
-.footer-col p, .footer-col li { color: #ccc; font-size: 13px; line-height: 1.8; list-style: none; }
-.footer-col ul { list-style: none; padding: 0; }
-.footer-col ul li a { color: #ccc; font-size: 13px; }
-.footer-col ul li a:hover { color: #e88800; }
-.footer-bottom { border-top: 1px solid #333; padding-top: 15px; margin-top: 15px; font-size: 12px; color: #888; }
-.footer-bottom a { color: #888; }
-.footer-bottom a:hover { color: #e88800; }
-@media (max-width: 768px) {
-    .footer-grid { grid-template-columns: 1fr; padding: 0 10px; }
+.menu-toggle { display:none; }
+.mobile-drawer, .drawer-overlay { display:none; }
+@media only screen and (max-width: 768px) {
+    nav { display:none; }
+    .menu-toggle { display:flex; align-items:center; justify-content:center; background:none; border:none; color:#fff; font-size:26px; cursor:pointer; padding:4px 8px; }
+    .drawer-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:299; }
+    .drawer-overlay.open { display:block; }
+    .mobile-drawer { display:block; position:fixed; top:0; right:-82%; width:78%; max-width:320px; height:100%; background:var(--darker); z-index:300; transition:right .25s ease; box-shadow:-4px 0 18px rgba(0,0,0,0.35); overflow-y:auto; }
+    .mobile-drawer.open { right:0; }
+    .drawer-close { text-align:right; padding:14px 18px 0; }
+    .drawer-close button { background:none; border:none; color:#fff; font-size:30px; cursor:pointer; line-height:1; }
+    .mobile-drawer ul { list-style:none; padding:6px 22px 24px; margin:0; }
+    .mobile-drawer ul li { padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.09); }
+    .mobile-drawer ul li a { color:#fff; font-size:16px; font-weight:600; display:block; }
+    .mobile-drawer ul li.active a { color:var(--primary); }
+    .mobile-drawer .drawer-lang { padding:16px 22px; display:flex; gap:14px; font-size:14px; }
+    .mobile-drawer .drawer-lang a { color:#aaa; font-weight:600; }
+    .mobile-drawer .drawer-lang a.active-lang { color:var(--primary); }
 }
-
-/* Sticky CTA */
-.sticky-cta-bar { position: fixed; bottom: 0; left: 0; right: 0; display: flex; z-index: 99; }
-.sticky-cta-bar a { flex: 1; text-align: center; padding: 14px 10px; font-size: 15px; font-weight: 700; text-decoration: none; color: #fff; transition: 0.2s; }
-.cta-whatsapp { background: #25d366; }
-.cta-telegram { background: #0088cc; }
-.sticky-cta-bar a:hover { filter: brightness(1.1); }
-@media (min-width: 769px) { .sticky-cta-bar { display: none; } }
-
-/* Breadcrumb */
-.breadcrumb { font-size: 13px; color: var(--textLight); margin-bottom: 16px; }
-.breadcrumb a { color: var(--primary); }
-.breadcrumb span { color: var(--textLight); }
-
-/* Hero */
-.hero-slim { background: linear-gradient(135deg, var(--darker), #2a2a4a); color: #fff; padding: 24px 20px; text-align: center; border-radius: var(--radius); margin-bottom: 20px; }
-.hero-slim h1 { color: #fff; margin-bottom: 4px; }
-.hero-slim p { color: #ddd; font-size: 14px; max-width: 600px; margin: 4px auto 0; }
     </style>
-</head>
-<body>
-<div class="top-header">
-    <div><a href="https://wa.me/+66808705704">📞 +66 80 870 5704</a> <a href="mailto:info@broservice.in.th">✉️ info@broservice.in.th</a></div>
-    <div class="langs">
-        <span>🌐</span>
-        <a href="./">EN</a>
-        <a href="../ru/dostavka-tsvetov-koh-phangan/">RU</a>
-        <a href="../th/flower-delivery-koh-phangan/">TH</a>
-        <a href="../he/flower-delivery-koh-phangan/">HE</a>
-    </div>
-</div>
-<div class="header">
-    <a href="../" class="logo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M6 12h12"/></svg>
-        Bro<span>Service</span>
-    </a>
-    <nav>
-        <a href="../">Home</a>
-        <a href="../contacts/">Contact</a>
-        <a href="../phone-tech-repair-koh-phangan/">Phone Repair</a>
-        <a href="../flower-delivery-koh-phangan/" class="cta-btn">🌸 Flowers</a>
-    </nav>
-    <button class="mobile-menu-btn" id="menuToggle">☰</button>
-</div>
-
-<div class="container">
-<div id="content">
-
-<div class="hero-slim">
-    <h1>Flower Delivery on Koh Phangan</h1>
-    <p>Fresh bouquets &amp; same-day delivery anywhere on the island</p>
-</div>
-
-<div class="breadcrumb">
-    <a href="../">Home</a> <span>›</span> Flower Delivery
-</div>
-
-<h2>Fresh Flower Delivery Across Koh Phangan</h2>
-<p>We deliver fresh flowers and hand-crafted bouquets anywhere on Koh Phangan — from Thong Sala to Haad Rin, Sri Thanu to Chaloklum. Whether you're celebrating a birthday, planning a wedding, surprising a loved one, or decorating a villa, our same-day flower delivery service covers the entire island.</p>
-<p>Choose from classic rose bouquets, tropical arrangements with local orchids and frangipani, custom gift baskets, or wedding flower packages. Every arrangement is prepared fresh on the day of delivery.</p>
-
-<h2>Flower Delivery Areas on Koh Phangan</h2>
-<ul>
-    <li><strong>Thong Sala</strong> — main town, daily deliveries</li>
-    <li><strong>Sri Thanu &amp; Haad Yao</strong> — west coast, same-day</li>
-    <li><strong>Haad Rin</strong> — full moon parties and events</li>
-    <li><strong>Chaloklum</strong> — north coast resorts and villas</li>
-    <li><strong>Baan Tai &amp; Baan Kai</strong> — central east coast</li>
-    <li><strong>Haad Salad</strong> — quiet bay area</li>
-</ul>
-
-<h2>Flowers &amp; Arrangements We Offer</h2>
-<ul>
-    <li>Rose bouquets (red, white, pink, mixed)</li>
-    <li>Tropical arrangements (orchids, heliconia, frangipani, palm leaves)</li>
-    <li>Mixed seasonal bouquets</li>
-    <li>Wedding flower packages (bridal bouquet, corsages, table decor)</li>
-    <li>Gift baskets with flowers and local treats</li>
-    <li>Single-stem deliveries for simple surprises</li>
-</ul>
-
-<h2>Same-Day Flower Delivery — How It Works</h2>
-<ol>
-    <li>Place your order before <strong>2:00 PM</strong> for same-day delivery.</li>
-    <li>We prepare your arrangement fresh from our floral stock.</li>
-    <li>Delivery is made between <strong>3:00 PM and 7:00 PM</strong> across Koh Phangan.</li>
-    <li>You receive a confirmation photo and delivery update.</li>
-</ol>
-
-<h2>Flower Delivery Prices on Koh Phangan</h2>
-<table class="price-table">
-    <thead>
-        <tr><th>Service</th><th>Price (THB)</th><th>Description</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>Small bouquet (mixed seasonal)</td><td class="price">450–650</td><td>Single-stem or small mixed arrangement</td></tr>
-        <tr><td>Medium bouquet (roses or mixed)</td><td class="price">650–1,200</td><td>Classic arrangement, gift-ready</td></tr>
-        <tr><td>Large bouquet (premium)</td><td class="price">1,200–2,500</td><td>Large arrangement with premium flowers</td></tr>
-        <tr><td>Tropical arrangement</td><td class="price">800–1,800</td><td>Orchids, heliconia, local tropicals</td></tr>
-        <tr><td>Wedding bridal bouquet</td><td class="price">1,500–3,500</td><td>Custom design, consultation included</td></tr>
-        <tr><td>Gift basket with flowers</td><td class="price">1,200–2,500</td><td>Flowers + local treats (fruits, snacks)</td></tr>
-        <tr><td>Same-day delivery (Koh Phangan)</td><td class="price">200–400</td><td>Flat fee based on location</td></tr>
-        <tr><td>Express delivery (under 2 hours)</td><td class="price">500</td><td>Priority arrangement and delivery</td></tr>
-    </tbody>
-</table>
-<p style="text-align:center;font-size:13px;color:var(--textLight);">Prices are approximate and may vary during peak season (New Year, Full Moon parties, Songkran).</p>
-
-<h2>Frequently Asked Questions About Flower Delivery on Koh Phangan</h2>
-<h3>How long does flower delivery take on Koh Phangan?</h3>
-<p>Same-day delivery if ordered before 2:00 PM. Delivery between 3:00 PM — 7:00 PM across the island.</p>
-<h3>Can I order flowers for delivery to a resort or hotel?</h3>
-<p>Yes, we deliver to all resorts, hotels, and private villas on Koh Phangan.</p>
-<h3>Do you deliver to Koh Samui or Koh Tao?</h3>
-<p>Yes, we can arrange inter-island delivery. Please contact us for pricing and timing.</p>
-<h3>What flowers are available on Koh Phangan?</h3>
-<p>We stock roses, orchids, frangipani, heliconia, lilies, sunflowers and seasonal tropical flowers. Special orders can be arranged with advance notice.</p>
-
-<p class="justifyfull" style="text-align:center;margin-top:24px;">
-    <a href="https://wa.me/+66808705704" style="background:var(--primary);color:#fff;padding:12px 28px;border-radius:var(--radius-sm);display:inline-block;font-weight:600;">📱 Order Now on WhatsApp</a>
-    <span style="display:inline-block;width:12px;"></span>
-    <a href="https://t.me/BroService_kpg_bot" style="background:#0088cc;color:#fff;padding:12px 28px;border-radius:var(--radius-sm);display:inline-block;font-weight:600;">✈️ Order on Telegram</a>
-</p>
-
-</div><!-- #content -->
-</div><!-- .container -->
-
-<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How long does flower delivery take on Koh Phangan?","acceptedAnswer":{"@type":"Answer","text":"Same-day delivery if ordered before 2:00 PM. Delivery between 3:00 PM — 7:00 PM across the island."}},
+    {"@type":"Question","name":"Can I order flowers for delivery to a resort or hotel?","acceptedAnswer":{"@type":"Answer","text":"Yes, we deliver to all resorts, hotels, and private villas on Koh Phangan."}},
+    {"@type":"Question","name":"Do you deliver to Koh Samui or Koh Tao?","acceptedAnswer":{"@type":"Answer","text":"Yes, we can arrange inter-island delivery. Please contact us for pricing and timing."}},
+    {"@type":"Question","name":"What flowers are available on Koh Phangan?","acceptedAnswer":{"@type":"Answer","text":"We stock roses, orchids, frangipani, heliconia, lilies, sunflowers and seasonal tropical flowers. Special orders can be arranged with advance notice."}}
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Flower Delivery Koh Phangan - Доставка цветов на Копанган",
+  "name": "Flower Delivery Koh Phangan - Same-Day Flower Delivery",
   "provider": {
     "@type": "LocalBusiness",
     "name": "BroService",
@@ -286,67 +208,222 @@ footer a:hover { text-decoration: underline; }
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Services",
+      "item": "https://broservice.in.th/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Flower Delivery",
+      "item": "https://broservice.in.th/flower-delivery-koh-phangan/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo" onclick="window.location='../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
+                <div class="header-right">
+                    <div class="header-phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
+                    <div class="social-icons">
+                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-close"><button id="drawerClose" aria-label="Close menu">×</button></div>
+        <ul><li><a href="../">🏠 Services</a></li><li><a href="../water-delivery-koh-phangan/">🚰 Water</a></li><li><a href="../bike-service-koh-phangan/">🛵 Bike</a></li><li><a href="../cleaning-koh-phangan/">🧹 Cleaning</a></li><li><a href="../ac-service-koh-phangan/">❄️ AC</a></li><li><a href="../plumber-koh-phangan/">🔧 Plumber</a></li><li><a href="../electrician-koh-phangan/">⚡ Electric</a></li><li><a href="../handyman-koh-phangan/">🔨 Handyman</a></li><li class="active"><a href="../flower-delivery-koh-phangan/">🌸 Flowers</a></li><li><a href="../contacts/">✉️ Contacts</a></li></ul>
+        <div class="drawer-lang"><a href="../" style="color:#e88800;font-weight:bold;">EN</a> | <a href="../ru/" style="color:#888;">RU</a> | <a href="../th/" style="color:#888;">TH</a> | <a href="../he/" style="color:#888;">HE</a></div>
+    </div>
+<nav><ul class="menu"><li><a href="../">🏠 Services</a></li><li><a href="../water-delivery-koh-phangan/">🚰 Water</a></li><li><a href="../bike-service-koh-phangan/">🛵 Bike</a></li><li><a href="../cleaning-koh-phangan/">🧹 Cleaning</a></li><li><a href="../ac-service-koh-phangan/">❄️ AC</a></li><li><a href="../plumber-koh-phangan/">🔧 Plumber</a></li><li><a href="../electrician-koh-phangan/">⚡ Electric</a></li><li><a href="../handyman-koh-phangan/">🔨 Handyman</a></li><li class="active"><a href="../flower-delivery-koh-phangan/">🌸 Flowers</a></li><li><a href="../contacts/">✉️ Contacts</a></li></ul></nav>        </div>
+    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="./">EN</a> <a href="../ru/dostavka-tsvetov-koh-phangan/">RU</a> <a href="../th/flower-delivery-koh-phangan/">TH</a> <a href="../he/flower-delivery-koh-phangan/">HE</a></div>
+    </header>
+<div class="usp-bar">
+    <span>🌸 Fresh bouquets</span>
+    <span>🚚 Same-day delivery</span>
+    <span>🌴 Island-wide coverage</span>
+    <span>🗣️ EN / RU / TH speaking</span>
+</div>
+    <div class="breadcrumbs">
+        <div class="container"><a href="../">Services</a> <span>›</span> <span>Flower Delivery on Koh Phangan</span></div>
+    </div>
+    <div class="service-hero">
+        <div class="container">
+            <img loading="lazy" width="800" height="533" src="../assets/images/handyman.jpg" alt="Fresh flower delivery on Koh Phangan">
+        </div>
+    </div>
+    <section id="content"><div class="container">
+    <h1>Flower Delivery on Koh Phangan</h1>
+    <div style="background:#f8f6f0;border-left:4px solid #e88800;padding:16px;margin:20px 0;border-radius:4px;"><strong>🌸 Same-day flower delivery on Koh Phangan — fresh bouquets, tropical arrangements, wedding flowers and gift baskets. Order before 2:00 PM for same-day delivery. Call +66 80-870-5704 or message us on WhatsApp / Telegram.</strong></div>
+    <p class="justifyfull">We deliver fresh flowers and hand-crafted bouquets anywhere on Koh Phangan — from Thong Sala to Haad Rin, Sri Thanu to Chaloklum. Whether you're celebrating a birthday, planning a wedding, surprising a loved one, or decorating a villa, our same-day flower delivery service covers the entire island.</p>
+    <p class="justifyfull">Choose from classic rose bouquets, tropical arrangements with local orchids and frangipani, custom gift baskets, or wedding flower packages. Every arrangement is prepared fresh on the day of delivery.</p>
 
-<footer>
-<div class="container">
-<div class="footer-grid">
-    <div class="footer-col">
-        <h4>🏠 Home Services</h4>
-        <ul>
-            <li><a href="../handyman-koh-phangan/">Handyman</a></li>
-            <li><a href="../electrician-koh-phangan/">Electrician</a></li>
-            <li><a href="../plumber-koh-phangan/">Plumber</a></li>
-            <li><a href="../ac-service-koh-phangan/">AC Service</a></li>
-            <li><a href="../cleaning-koh-phangan/">Cleaning</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4>🛵 Delivery &amp; Tech</h4>
-        <ul>
-            <li><a href="../bike-service-koh-phangan/">Bike Service</a></li>
-            <li><a href="../phone-tech-repair-koh-phangan/">Phone Repair</a></li>
-            <li><a href="../flower-delivery-koh-phangan/" style="color:#e88800;font-weight:600;">🌸 Flower Delivery</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4>📍 Areas</h4>
-        <ul>
-            <li><a href="../thong-sala-koh-phangan/">Thong Sala</a></li>
-            <li><a href="../haad-rin-koh-phangan/">Haad Rin</a></li>
-            <li><a href="../chaloklum-koh-phangan/">Chaloklum</a></li>
-            <li><a href="../baan-tai-koh-phangan/">Baan Tai</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4>🌐 Languages</h4>
-        <ul>
-            <li><a href="./">English</a></li>
-            <li><a href="../ru/">Русский</a></li>
-            <li><a href="../th/">ไทย</a></li>
-            <li><a href="../he/">עברית</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4>📞 Contact</h4>
-        <ul>
-            <li><a href="https://wa.me/+66808705704">WhatsApp</a></li>
-            <li><a href="https://t.me/BroService_kpg_bot">Telegram</a></li>
-            <li><a href="mailto:info@broservice.in.th">Email</a></li>
-            <li><a href="../contacts/">Contact Page</a></li>
-        </ul>
-    </div>
-</div>
-<div class="footer-bottom">
-    <p>© 2026 <a href="./">BroService.in.th</a> · All rights reserved</p>
-</div>
-</div>
-</footer>
+    <img loading="lazy" width="800" height="533" src="../assets/images/handyman.jpg" alt="Flower bouquets and arrangements on Koh Phangan" class="float-img" style="max-width:35%;width:auto;height:auto;">
+    <h2>🌸 Flower Delivery Areas</h2>
+    <ul>
+        <li><strong>Thong Sala</strong> — main town, daily deliveries</li>
+        <li><strong>Sri Thanu &amp; Haad Yao</strong> — west coast, same-day</li>
+        <li><strong>Haad Rin</strong> — full moon parties and events</li>
+        <li><strong>Chaloklum</strong> — north coast resorts and villas</li>
+        <li><strong>Baan Tai &amp; Baan Kai</strong> — central east coast</li>
+        <li><strong>Haad Salad</strong> — quiet bay area</li>
+    </ul>
 
+    <h2>🌸 Flowers &amp; Arrangements</h2>
+    <ul>
+        <li>Rose bouquets (red, white, pink, mixed)</li>
+        <li>Tropical arrangements (orchids, heliconia, frangipani, palm leaves)</li>
+        <li>Mixed seasonal bouquets</li>
+        <li>Wedding flower packages (bridal bouquet, corsages, table decor)</li>
+        <li>Gift baskets with flowers and local treats</li>
+        <li>Single-stem deliveries for simple surprises</li>
+    </ul>
+
+    <h2>📋 How It Works</h2>
+    <ol style="max-width:600px;margin:10px auto 16px;text-align:left;padding-left:20px;">
+        <li style="margin:5px 0;"><strong>Order</strong> — Place your order before 2:00 PM for same-day delivery</li>
+        <li style="margin:5px 0;"><strong>Prepare</strong> — We prepare your arrangement fresh from our floral stock</li>
+        <li style="margin:5px 0;"><strong>Deliver</strong> — Delivery between 3:00 PM and 7:00 PM across Koh Phangan</li>
+        <li style="margin:5px 0;"><strong>Confirm</strong> — You receive a confirmation photo and delivery update</li>
+    </ol>
+
+    <h2>💰 Prices</h2>
+    <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
+            <thead><tr style="background:var(--primary);color:#fff;"><th style="padding:10px 12px;text-align:left;">Service</th><th style="padding:10px 12px;text-align:left;">Price</th><th style="padding:10px 12px;text-align:left;">Details</th></tr></thead>
+            <tbody>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Small Bouquet</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿450-650</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Single-stem or small mixed arrangement</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Medium Bouquet</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿650-1,200</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Classic arrangement, gift-ready</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Large Bouquet (Premium)</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿1,200-2,500</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Large arrangement with premium flowers</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Tropical Arrangement</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿800-1,800</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Orchids, heliconia, local tropicals</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Wedding Bridal Bouquet</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿1,500-3,500</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Custom design, consultation included</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Gift Basket with Flowers</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿1,200-2,500</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Flowers + local treats (fruits, snacks)</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Same-Day Delivery</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿200-400</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Flat fee based on location</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Express Delivery (&lt;2h)</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿500</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Priority arrangement and delivery</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="text-align:center;font-size:13px;color:#888;">Prices are approximate and may vary during peak season (New Year, Full Moon parties, Songkran).</p>
+
+    <h2>✅ Why Choose BroService?</h2>
+    <ul>
+        <li><strong>Fresh Daily</strong> — arrangements prepared fresh on the day of delivery</li>
+        <li><strong>Fast Delivery</strong> — same-day service across the entire island</li>
+        <li><strong>Quality Flowers</strong> — sourced from trusted local suppliers</li>
+        <li><strong>Custom Orders</strong> — special requests welcome with advance notice</li>
+        <li><strong>Island-Wide</strong> — covers all areas of Koh Phangan</li>
+    </ul>
+
+    <h3>📍 Areas We Cover</h3>
+    <p class="justifyfull">Our flower delivery covers all Koh Phangan: <strong>Thong Sala</strong>, <strong>Sri Thanu</strong>, <strong>Haad Rin</strong>, <strong>Chaloklum</strong>, <strong>Baan Tai</strong>, <strong>Haad Yao</strong>, and surrounding areas.</p>
+
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3>How long does flower delivery take on Koh Phangan?</h3>
+        <p>Same-day delivery if ordered before 2:00 PM. Delivery between 3:00 PM — 7:00 PM across the island.</p>
+        <h3>Can I order flowers for delivery to a resort or hotel?</h3>
+        <p>Yes, we deliver to all resorts, hotels, and private villas on Koh Phangan.</p>
+        <h3>Do you deliver to Koh Samui or Koh Tao?</h3>
+        <p>Yes, we can arrange inter-island delivery. Please contact us for pricing and timing.</p>
+        <h3>What flowers are available on Koh Phangan?</h3>
+        <p>We stock roses, orchids, frangipani, heliconia, lilies, sunflowers and seasonal tropical flowers. Special orders can be arranged with advance notice.</p>
+    </div>
+
+    <div class="cta-block">
+        <h2>🌸 Order Flowers Now!</h2>
+        <div class="phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
+        <div class="hours">Available 8:00 AM — 8:00 PM, 7 days a week</div>
+        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#25D366;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
+    </div>
+    </div></section>
+    <div class="related-services">
+        <h2>Related Services</h2>
+        <div class="related-grid">
+            <a href="../bike-service-koh-phangan/"><span class="emoji">🛵</span>Bike Service</a><a href="../phone-tech-repair-koh-phangan/"><span class="emoji">📱</span>Phone Repair</a><a href="../water-delivery-koh-phangan/"><span class="emoji">🚰</span>Water Delivery</a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>BroService.in.th</h4>
+                    <p>Your Local Service Team on Koh Phangan.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="../water-delivery-koh-phangan/">🚰 Water Delivery</a></li>
+                        <li><a href="../cleaning-koh-phangan/">🧹 Cleaning</a></li>
+                        <li><a href="../plumber-koh-phangan/">🔧 Plumber</a></li>
+                        <li><a href="../ac-service-koh-phangan/">❄️ AC Service</a></li>
+                        <li><a href="../bike-service-koh-phangan/">🛵 Bike Service</a></li>
+                        <li><a href="../phone-tech-repair-koh-phangan/">📱 Phone &amp; Tech Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></li>
+                        <li><a href="mailto:info@broservice.in.th">✉️ info@broservice.in.th</a></li>
+                        <li><a href="https://wa.me/+66808705704">💬 WhatsApp</a></li>
+                        <li><a href="https://t.me/BroService_kpg_bot">✈️ Telegram</a></li>
+                        <li><a href="../contacts/">📋 Contact page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="../">🏠 Services</a></li>
+                        <li><a href="../contacts/">✉️ Contacts</a></li>
+                        <li><a href="../sitemap.xml" target="_blank">🗺️ Sitemap</a></li>
+                        <li><span style="color: #888;">⚡ Available 8AM-8PM</span></li>
+                        <li><span style="color: #888;">🌴 Koh Phangan, Thailand</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Areas We Serve</h4>
+                    <ul class="footer-links">
+                        <li><a href="../thong-sala-koh-phangan/">📍 Thong Sala</a></li>
+                        <li><a href="../srithanu-koh-phangan/">📍 Srithanu</a></li>
+                        <li><a href="../haad-rin-koh-phangan/">📍 Haad Rin</a></li>
+                        <li><a href="../baan-tai-koh-phangan/">📍 Baan Tai</a></li>
+                        <li><a href="../chaloklum-koh-phangan/">📍 Chaloklum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 <a href="../">BroService.in.th</a> · All rights reserved · Website by <a href="https://adfoto.com.ua" target="_blank">adfoto.com.ua</a></p>
+            </div>
+        </div>
+    </footer>
 <div class="sticky-cta-bar" id="stickyCta">
     <a href="https://wa.me/+66808705704" class="cta-whatsapp">💬 WhatsApp</a>
     <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">✈️ Telegram</a>
 </div>
-
 <script>
 (function(){
   var bar = document.getElementById('stickyCta');
@@ -362,28 +439,16 @@ footer a:hover { text-decoration: underline; }
 <script>
 (function(){
   var btn = document.getElementById('menuToggle');
-  var header = document.querySelector('.header');
-  if (!btn || !header) return;
-  var drawer = document.createElement('div');
-  drawer.id = 'mobileDrawer';
-  drawer.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:999;display:none;';
-  var panel = document.createElement('div');
-  panel.style.cssText = 'position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:1000;padding:20px;overflow-y:auto;';
-  panel.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;"><span style="font-weight:700;font-size:18px;">Menu</span><button id="drawerClose" style="background:none;border:none;font-size:22px;cursor:pointer;">✕</button></div><nav style="display:flex;flex-direction:column;gap:4px;">' + 
-    '<a href="../" style="padding:10px 8px;border-radius:6px;font-size:15px;color:#333;">Home</a>' +
-    '<a href="../phone-tech-repair-koh-phangan/" style="padding:10px 8px;border-radius:6px;font-size:15px;color:#333;">Phone Repair</a>' +
-    '<a href="../flower-delivery-koh-phangan/" style="padding:10px 8px;border-radius:6px;font-size:15px;color:#e88800;font-weight:600;">🌸 Flower Delivery</a>' +
-    '<a href="../contacts/" style="padding:10px 8px;border-radius:6px;font-size:15px;color:#333;">Contact</a>' +
-    '</nav>';
-  drawer.appendChild(panel);
-  document.body.appendChild(drawer);
-  var overlay = drawer;
-  var closeBtn = panel.querySelector('#drawerClose');
-  function openDrawer(){ drawer.style.display = 'block'; }
-  function closeDrawer(){ drawer.style.display = 'none'; }
+  var drawer = document.getElementById('mobileDrawer');
+  var overlay = document.getElementById('drawerOverlay');
+  var closeBtn = document.getElementById('drawerClose');
+  if (!btn || !drawer || !overlay) return;
+  function openDrawer(){ drawer.classList.add('open'); overlay.classList.add('open'); }
+  function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); }
   btn.addEventListener('click', openDrawer);
-  overlay.addEventListener('click', function(e){ if (e.target === overlay) closeDrawer(); });
+  overlay.addEventListener('click', closeDrawer);
   if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 })();
 </script>
 </body>
