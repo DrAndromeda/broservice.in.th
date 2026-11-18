@@ -13,6 +13,7 @@ Languages shown on the website: English, Russian, Thai and Hebrew
 - Telegram: https://t.me/BroService_kpg_bot
 - Email: info@broservice.in.th
 - Contact page: https://broservice.in.th/contacts/
+- Privacy: https://broservice.in.th/privacy/
 
 ## Services
 
@@ -27,6 +28,7 @@ The following service categories are presented on the website. Actual availabili
 - Electrical services: https://broservice.in.th/electrician-koh-phangan/
 - Property rental assistance: https://broservice.in.th/property-rental-koh-phangan/
 - Phone and technology repair: https://broservice.in.th/phone-tech-repair-koh-phangan/
+- Flower delivery: https://broservice.in.th/flower-delivery-koh-phangan/
 
 ## Service areas
 

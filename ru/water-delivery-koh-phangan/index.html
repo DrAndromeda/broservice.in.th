@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Доставка воды на Ко Пхангане | BroService</title>
     <meta name="description" content="Доставка бутилированной воды 19Л на виллы и в кондо по всему Ко Пхангану — Тонгсала, Сритану, Хаад Рин, Чалоклум, Баан Тай.">
-    <link rel="icon" href="../../ru/assets/images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    <link rel="preload" href="../../assets/fonts/inter-latin-1ab1ad.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/open-sans-latin-2808bc.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
     <link rel="canonical" href="https://broservice.in.th/ru/water-delivery-koh-phangan/">
     <meta property="og:title" content="Доставка воды на Ко Пхангане | BroService">
     <meta property="og:description" content="Доставка бутилированной воды 19Л на виллы и в кондо по всему Ко Пхангану — Тонгсала, Сритану, Хаад Рин, Чалоклум, Баан Тай.">
@@ -17,150 +18,81 @@
     <meta property="og:site_name" content="BroService.in.th">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:image" content="https://broservice.in.th/assets/images/water-delivery.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="533">
+    <meta property="og:image:alt" content="Доставка воды на Ко Пхангане">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Доставка воды на Ко Пхангане | BroService">
     <meta name="twitter:description" content="Доставка бутилированной воды 19Л на виллы и в кондо по всему Ко Пхангану — Тонгсала, Сритану, Хаад Рин, Чалоклум, Баан Тай.">
     <meta name="twitter:image" content="https://broservice.in.th/assets/images/water-delivery.jpg">
+    <meta name="twitter:image:alt" content="Доставка воды на Ко Пхангане">
     <link rel="alternate" hreflang="en" href="https://broservice.in.th/water-delivery-koh-phangan/">
-    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/water-delivery-koh-phangan/">
     <link rel="alternate" hreflang="ru" href="https://broservice.in.th/ru/water-delivery-koh-phangan/">
     <link rel="alternate" hreflang="th" href="https://broservice.in.th/th/water-delivery-koh-phangan/">
     <link rel="alternate" hreflang="he" href="https://broservice.in.th/he/water-delivery-koh-phangan/">
-    <style>
-:root {
-    --primary: #e88800;
-    --primary-dark: #c47000;
-    --dark: #1a1414;
-    --dark2: #2b2424;
-    --darker: #1f1919;
-    --bg: #edeef0;
-    --text-light: #8f8b8c;
-    --white: #fff;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #000; background: var(--dark); line-height: 1.65; font-size: 16px; }
-.container { max-width: 960px; margin: 0 auto; padding: 0 15px; }
-a { text-decoration: none; color: var(--primary); }
-a:hover { text-decoration: underline; }
-header { background: linear-gradient(180deg, var(--dark2), var(--darker)); padding: 4px 0 0; position: sticky; top: 0; z-index: 100; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 0 2px; }
-.logo { font-family: Inter, sans-serif; font-size: 22px; font-weight: 700; color: var(--primary); text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
-.logo span { color: #d3d3d3; font-weight: 300; }
-.header-right { display: flex; align-items: center; gap: 8px; }
-.header-phone { font-size: 16px; font-weight: bold; }
-.header-phone a { color: #e88800; font-weight: bold; }
-.social-icons { display: flex; gap: 3px; }
-.social-icons a { display: inline-block; transition: opacity 0.2s; }
-.social-icons a:hover { opacity: 0.7; }
-.social-icons svg { width: 22px; height: 22px; border-radius: 50%; display: block; }
-nav { background: linear-gradient(180deg, #e57c00, #c47000); border-radius: 6px 6px 0 0; margin-top: 4px; }
-ul.menu { display: flex; justify-content: center; flex-wrap: nowrap; list-style: none; padding: 4px 4px; }
-ul.menu li { display: inline-block; line-height: 16px; margin: 2px 1px; padding: 4px 6px; border-radius: 5px; transition: background 0.2s; }
-ul.menu li:hover { background: rgba(0,0,0,0.08); }
-ul.menu li a { font-size: 13px; line-height: 16px; color: #1f1919; font-weight: 600; white-space: nowrap; }
-ul.menu li a:hover { color: #fff; }
-ul.menu li.active { background: rgba(0,0,0,0.1); }
-ul.menu li.active a { color: #fff; }
-.breadcrumbs { background: var(--bg); padding: 6px 0; font-size: 13px; color: #888; }
-.breadcrumbs a { color: var(--primary); }
-#content { background: var(--bg); padding: 20px 0 25px; text-align: center; }
-#content p, #content li, #content .justifyfull { text-align: left; max-width: 700px; margin: 10px auto; }
-#content ul { display: inline-block; text-align: left; max-width: 600px; padding-left: 35px; }
-#content h1 { font-family: Inter, sans-serif; font-size: 28px; font-weight: 700; color: #1f1919; margin-bottom: 14px; }
-#content h2 { font-family: Inter, sans-serif; font-size: 22px; font-weight: 600; color: #1f1919; margin: 18px 0 8px; border-left: 4px solid var(--primary); padding-left: 12px; text-align: center; }
-#content h3 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; color: var(--primary); margin: 16px 0 6px; text-align: center; }
-#content p { margin: 10px 0; color: #444; line-height: 1.65; }
-#content .justifyfull { text-align: justify; }
-#content ul { margin: 10px 0 16px; padding-left: 20px; list-style: none; }
-#content ul li { margin: 5px 0; padding-left: 20px; position: relative; }
-#content ul li::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
-#content table { margin: 15px auto !important; }
-#content .faq-item { text-align: left; max-width: 700px; margin: 0 auto; }
-.float-img { float: right; margin: 0 0 15px 20px; border-radius: 8px; max-width: 40%; }
-img { max-width: 100%; height: auto; border-radius: 7px; }
-#content img { max-width: 100%; height: auto; max-height: 400px; object-fit: contain; }
-.cta-block { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); padding: 24px 20px; border-radius: 10px; text-align: center; margin: 20px 0; }
-.cta-block h2 { color: var(--white) !important; font-size: 24px !important; border: none !important; padding: 0 !important; margin-bottom: 10px !important; }
-.cta-block .phone { font-size: 28px; font-weight: 700; margin: 10px 0; }
-.cta-block .phone a { color: var(--white); }
-.cta-block .hours { font-size: 14px; opacity: 0.9; }
-.usp-bar { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; background:#fff; padding:12px 15px; margin:0; border-bottom:3px solid var(--primary); font-size:13px; color:#333; font-weight:600; }
-.usp-bar span { display:flex; align-items:center; gap:6px; white-space:nowrap; }
-.related-services { max-width:960px; margin:0 auto; padding:25px 15px; background:var(--bg); }
-.related-services h2 { font-family: Inter, sans-serif; font-size:20px; font-weight:600; color:#1f1919; text-align:center; margin-bottom:14px; }
-.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.related-grid a { display:block; background:#fff; border-radius:8px; padding:16px 10px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,0.08); color:#1f1919; font-weight:600; font-size:14px; transition:transform .15s; }
-.related-grid a:hover { transform:translateY(-3px); text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.12); }
-.related-grid .emoji { display:block; font-size:26px; margin-bottom:6px; }
-footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
-.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-bottom: 20px; }
-.footer-col h4 { font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
-.footer-col p { font-size: 13px; line-height: 1.5; color: #aaa; }
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 6px; }
-.footer-links a { font-size: 13px; color: #aaa; }
-.footer-links a:hover { color: var(--primary); }
-.footer-social { display: flex; gap: 6px; margin-top: 10px; }
-.footer-social a:hover { opacity: 0.7; }
-.footer-social svg { width: 22px; height: 22px; border-radius: 50%; }
-.footer-bottom { border-top: 1px solid #333; padding-top: 15px; text-align: center; font-size: 13px; color: #888; }
-.footer-bottom a { color: var(--primary); }
-.menu-toggle { display:none; }
-.mobile-drawer, .drawer-overlay { display:none; }
-.sticky-cta-bar { display:none; }
-@media only screen and (max-width: 768px) {
-    nav { display:none; }
-    .menu-toggle { display:flex; align-items:center; justify-content:center; background:none; border:none; color:#fff; font-size:26px; cursor:pointer; padding:4px 8px; }
-    .drawer-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:299; }
-    .drawer-overlay.open { display:block; }
-    .mobile-drawer { display:block; position:fixed; top:0; right:-82%; width:78%; max-width:320px; height:100%; background:var(--darker); z-index:300; transition:right .25s ease; box-shadow:-4px 0 18px rgba(0,0,0,0.35); overflow-y:auto; }
-    .mobile-drawer.open { right:0; }
-    .drawer-close { text-align:right; padding:14px 18px 0; }
-    .drawer-close button { background:none; border:none; color:#fff; font-size:30px; cursor:pointer; line-height:1; }
-    .mobile-drawer ul { list-style:none; padding:6px 22px 24px; margin:0; }
-    .mobile-drawer ul li { padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.09); }
-    .mobile-drawer ul li a { color:#fff; font-size:16px; font-weight:600; display:block; }
-    .mobile-drawer ul li.active a { color:var(--primary); }
-    .mobile-drawer .drawer-lang { padding:16px 22px; display:flex; gap:14px; font-size:14px; }
-    .mobile-drawer .drawer-lang a { color:#aaa; font-weight:600; }
-    .mobile-drawer .drawer-lang a.active-lang { color:var(--primary); }
-    .header-right { flex-direction: column; gap: 5px; }
-    #content h1 { font-size: 22px; }
-    #content h2 { font-size: 18px; }
-    .float-img { float: none; margin: 0 auto 15px; max-width: 100%; }
-    .footer-grid { grid-template-columns: 1fr; padding: 0 15px; gap: 10px; }
-    .header-inner { flex-direction: column; text-align: center; }
-    .usp-bar { font-size:11px; gap:6px 12px; padding:8px 10px; }
-    .related-grid { grid-template-columns:1fr 1fr; }
-    .sticky-cta-bar { display:flex; position:fixed; bottom:0; left:0; right:0; z-index:200; box-shadow:0 -2px 12px rgba(0,0,0,0.18); }
-    .sticky-cta-bar a { flex:1; text-align:center; padding:13px 0; font-size:14px; font-weight:700; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px; }
-    .sticky-cta-bar .cta-whatsapp { background:#25D366; color:#fff; }
-    .sticky-cta-bar .cta-telegram { background:#0088cc; color:#fff; }
-    body { padding-bottom: 52px; }
-}
-</style>
+    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/water-delivery-koh-phangan/">
+    <link rel="stylesheet" href="../../assets/css/tpl-1449763b.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "BroService.in.th",
+  "@id": "https://broservice.in.th/#localbusiness",
+  "name": "BroService",
+  "url": "https://broservice.in.th/",
   "telephone": "+66808705704",
-  "url": "https://broservice.in.th/ru/water-delivery-koh-phangan/",
+  "email": "info@broservice.in.th",
   "areaServed": [
-    "Thong Sala",
-    "Srithanu",
-    "Haad Rin",
-    "Chaloklum",
-    "Baan Tai",
-    "Koh Phangan"
+    {
+      "@type": "Place",
+      "name": "Koh Phangan"
+    },
+    {
+      "@type": "Place",
+      "name": "Thong Sala"
+    },
+    {
+      "@type": "Place",
+      "name": "Srithanu"
+    },
+    {
+      "@type": "Place",
+      "name": "Haad Rin"
+    },
+    {
+      "@type": "Place",
+      "name": "Baan Tai"
+    },
+    {
+      "@type": "Place",
+      "name": "Chaloklum"
+    }
   ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Koh Phangan",
     "addressRegion": "Surat Thani",
     "addressCountry": "TH"
-  }
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+        "https://schema.org/Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://facebook.com/broservice.kohphangan",
+    "https://instagram.com/broservice_kohphangan"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -191,6 +123,30 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
         "@type": "Answer",
         "text": "Да, оба варианта доступны в аренду, если ваш сломан или отсутствует."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько бутылей 19Л нужно на семью?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Это зависит от числа жильцов и от того, сколько воды вы расходуете на питьё и готовку. Сообщите нам, сколько человек живёт в доме, начните с небольшого объёма раз в неделю или раз в две недели и скорректируйте после первых доставок."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можете ли вы снабжать гестхаус, офис или мероприятие?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, крупные заказы для гестхаусов, офисов и мероприятий входят в услугу. Напишите нам количество, адрес и дату, к которой нужна вода, и мы уточним детали."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что делать, если во время доставки никого нет на месте?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Лучше заранее сообщить, где можно оставить бутыли или кто может их принять, и подтвердить это в сообщении при заказе."
+      }
     }
   ]
 }
@@ -203,8 +159,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Services",
-      "item": "https://broservice.in.th/"
+      "name": "Услуги",
+      "item": "https://broservice.in.th/ru/"
     },
     {
       "@type": "ListItem",
@@ -214,21 +170,23 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     }
   ]
 }
-</script>
+</script><link rel="stylesheet" href="../../assets/css/common.css">
+<noscript><link rel="stylesheet" href="../../assets/css/noscript.css"></noscript>
 </head>
 <body>
+<a class="skip-link" href="#content">К содержимому</a>
     <header>
         <div class="container">
             <div class="header-inner">
-                <div class="logo" onclick="window.location='../../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
+                <div class="logo" onclick="window.location='../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
                 <div class="header-right">
                     <div class="header-phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
                     <div class="social-icons">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
             </div>
@@ -237,11 +195,11 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
             <div class="mobile-drawer" id="mobileDrawer">
                 <div class="drawer-close"><button id="drawerClose" aria-label="Close">×</button></div>
                 <ul><li><a href="../../ru/">🏠 Услуги</a></li><li class="active"><a href="../../ru/water-delivery-koh-phangan/">🚰 Вода</a></li><li><a href="../../ru/bike-service-koh-phangan/">🛵 Байк</a></li><li><a href="../../ru/cleaning-koh-phangan/">🧹 Уборка</a></li><li><a href="../../ru/ac-service-koh-phangan/">❄️ Кондиционер</a></li><li><a href="../../ru/plumber-koh-phangan/">🔧 Сантехник</a></li><li><a href="../../ru/electrician-koh-phangan/">⚡ Электрик</a></li><li><a href="../../ru/handyman-koh-phangan/">🔨 Мастер</a></li><li><a href="../../ru/contacts/">✉️ Контакты</a></li></ul>
-                <div class="drawer-lang"><a href="../../ru/water-delivery-koh-phangan/">EN</a><a href="../../ru/water-delivery-koh-phangan/" class="active-lang">RU</a><a href="../../../th/water-delivery-koh-phangan/">TH</a><a href="../../../he/water-delivery-koh-phangan/">HE</a></div>
+                <div class="drawer-lang"><a href="../../water-delivery-koh-phangan/">EN</a><a href="./" class="active-lang">RU</a><a href="../../th/water-delivery-koh-phangan/">TH</a><a href="../../he/water-delivery-koh-phangan/">HE</a></div>
             </div>
-            <nav><ul class="menu"><li><a href="../../">🏠 Услуги</a></li><li class="active"><a href="../../ru/water-delivery-koh-phangan/">🚰 Вода</a></li><li><a href="../../ru/bike-service-koh-phangan/">🛵 Байк</a></li><li><a href="../../ru/cleaning-koh-phangan/">🧹 Уборка</a></li><li><a href="../../ru/ac-service-koh-phangan/">❄️ Кондиционер</a></li><li><a href="../../ru/plumber-koh-phangan/">🔧 Сантехник</a></li><li><a href="../../ru/electrician-koh-phangan/">⚡ Электрик</a></li><li><a href="../../ru/handyman-koh-phangan/">🔨 Мастер</a></li><li><a href="../../ru/contacts/">✉️ Контакты</a></li></ul></nav>
+            <nav><ul class="menu"><li><a href="../">🏠 Услуги</a></li><li class="active"><a href="../../ru/water-delivery-koh-phangan/">🚰 Вода</a></li><li><a href="../../ru/bike-service-koh-phangan/">🛵 Байк</a></li><li><a href="../../ru/cleaning-koh-phangan/">🧹 Уборка</a></li><li><a href="../../ru/ac-service-koh-phangan/">❄️ Кондиционер</a></li><li><a href="../../ru/plumber-koh-phangan/">🔧 Сантехник</a></li><li><a href="../../ru/electrician-koh-phangan/">⚡ Электрик</a></li><li><a href="../../ru/handyman-koh-phangan/">🔨 Мастер</a></li><li><a href="../../ru/contacts/">✉️ Контакты</a></li></ul></nav>
         </div>
-    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../../water-delivery-koh-phangan/">EN</a> <a href="../../../ru/water-delivery-koh-phangan/">RU</a> <a href="../../../th/water-delivery-koh-phangan/">TH</a> <a href="../../../he/water-delivery-koh-phangan/">HE</a></div>
+    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../water-delivery-koh-phangan/">EN</a> <a href="./">RU</a> <a href="../../th/water-delivery-koh-phangan/">TH</a> <a href="../../he/water-delivery-koh-phangan/">HE</a></div>
     </header>
     <div class="usp-bar">
         <span>⚡ Тот же день</span>
@@ -254,55 +212,128 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </div>
     <div class="service-hero">
         <div class="container">
-            <img loading="lazy" width="800" height="533" src="../../assets/images/water-delivery.jpg" alt="Доставка воды на Ко Пхангане">
+            <picture><source type="image/webp" srcset="../../assets/images/water-delivery-400.webp 400w, ../../assets/images/water-delivery.webp 800w" sizes="(max-width: 800px) 100vw, 800px"><img fetchpriority="high" decoding="async" width="800" height="533" src="../../assets/images/water-delivery.jpg" alt="Доставка воды на Ко Пхангане"></picture>
         </div>
     </div>
-    <section id="content"><div class="container">
+    <main id="content"><div class="container">
     <h1>🚰 Доставка воды на Ко Пхангане</h1>
-    <div style="background:#f8f6f0;border-left:4px solid #e88800;padding:16px;margin:20px 0;border-radius:4px;"><strong>Закончилась питьевая вода — один из самых частых звонков на острове, и один из самых быстрых в решении.</strong></div>
-    <h2>Что входит</h2>
+    <div style="background:#f8f6f0;border-left:4px solid #9c5400;padding:16px;margin:20px 0;border-radius:4px;"><strong>Закончилась питьевая вода — один из самых частых звонков на острове, и один из самых быстрых в решении.</strong></div>
+    <h2>Услуги доставки воды</h2>
     <ul>
-        <li>Доставка бутылей 19Л прямо до двери</li>
-        <li>Регулярные заказы по графику (неделя / две недели)</li>
-        <li>Аренда помпы и кулера, если ваш сломан</li>
-        <li>Оплата наличными, переводом или PromptPay</li>
+        <li><strong>Доставка бутылей 19Л</strong> — в тот же день в большинстве районов</li>
+        <li><strong>Доставка по графику</strong> — раз в неделю или раз в две недели, чтобы вода не заканчивалась</li>
+        <li><strong>Аренда помпы</strong> — для вилл, где она не установлена</li>
+        <li><strong>Аренда кулера</strong> — диспенсеры с горячей и холодной водой</li>
+        <li><strong>Крупные заказы</strong> — для гестхаусов, офисов, мероприятий</li>
+        <li><strong>Удобная оплата</strong> — наличные, перевод или PromptPay</li>
     </ul>
-    <h2>Как это работает</h2>
+    <h2>Как заказать воду</h2>
     <ol style="max-width:600px;margin:10px auto 16px;text-align:left;padding-left:20px;">
-        <li style="margin:5px 0;">Напишите или позвоните — опишите проблему.</li>
-        <li style="margin:5px 0;">Даём предварительную диагностику по телефону и честную смету.</li>
-        <li style="margin:5px 0;">Приезжаем, выполняем работу и даём гарантию.</li>
+        <li style="margin:5px 0;"><strong>Позвоните или напишите</strong> — по телефону, в WhatsApp или Telegram</li>
+        <li style="margin:5px 0;"><strong>Назовите количество бутылей</strong> — и свой адрес</li>
+        <li style="margin:5px 0;"><strong>Мы доставляем</strong> — в тот же день в большинстве районов</li>
+        <li style="margin:5px 0;"><strong>Оплатите при получении</strong> — наличными, переводом или через PromptPay</li>
+        <li style="margin:5px 0;"><strong>Настройте график</strong> — регулярная доставка по желанию</li>
     </ol>
     <p class="justifyfull">Мы доставляем бутыли 19Л прямо на вашу виллу, в кондо или гестхаус в любой точке Ко Пхангана, включая Тонгсалу, Сритану, Хаад Рин, Чалоклум и Баан Тай. Большинство заказов в районе Тонгсалы и Сритану доставляются в тот же день; более удалённые адреса у Чалоклума или Баан Тай — обычно на следующий день.</p>
     <p class="justifyfull">Для тех, кто снимает жильё надолго, настраиваем регулярную доставку по графику — раз в неделю или раз в две недели, в зависимости от количества человек. Также сдаём в аренду помпы и кулеры, если ваша текущая установка сломана или вы только въезжаете.</p>
     <p class="justifyfull">Оплата простая: наличными при доставке, банковским переводом или через PromptPay. Постоянным клиентам на регулярном графике — небольшая скидка.</p>
+    <h2>💰 Цены на доставку воды</h2>
+    <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
+            <thead><tr style="background:var(--primary);color:#fff;"><th style="padding:10px 12px;text-align:left;">Позиция</th><th style="padding:10px 12px;text-align:left;">Цена</th><th style="padding:10px 12px;text-align:left;">Подробности</th></tr></thead>
+            <tbody>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Бутыль 19Л</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿60/бутыль</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Разовый заказ</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Доставка по неделям</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿55/бутыль</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Скидка за регулярность</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Аренда помпы</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿300/месяц</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Ручная помпа</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Аренда кулера</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿500/месяц</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Диспенсер с горячей и холодной водой</td></tr>
+            </tbody>
+        </table>
+    </div>
+<p class="price-note" style="font-size:13px;color:#595959;text-align:center;margin:4px 0 14px;">Ориентировочные цены в тайских батах (฿). Итоговая цена зависит от работы и согласуется с вами заранее. Обновлено 17 ноября 2026.</p>
+    <h2>✅ Почему BroService для доставки воды?</h2>
+    <ul>
+        <li><strong>Доставка в тот же день</strong> — в Тонгсале и Сритану</li>
+        <li><strong>Вода не закончится</strong> — регулярная доставка по графику</li>
+        <li><strong>Надёжные поставщики</strong> — качественная бутилированная вода</li>
+        <li><strong>Удобная оплата</strong> — наличные, перевод или PromptPay</li>
+        <li><strong>Скидка постоянным клиентам</strong> — на регулярные заказы</li>
+    </ul>
     <h2>Зоны покрытия и время реакции</h2>
+    <p class="justifyfull">📍 Наша <strong>доставка воды</strong> охватывает весь Ко Пханган: <strong>Тонгсала</strong>, <strong>Сритану</strong>, <strong>Хаад Рин</strong>, <strong>Чалоклум</strong>, <strong>Баан Тай</strong> и окрестности.</p>
     <div style="overflow-x:auto;">
         <table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
             <thead><tr style="background:var(--primary);color:#fff;"><th style="padding:10px 12px;text-align:left;">Район</th><th style="padding:10px 12px;text-align:left;">Обычное время реакции</th></tr></thead>
             <tbody>
                 <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Тонгсала / Сритану</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">В тот же день</td></tr>
-                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Хаад Рин</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">В тот же день – на следующий</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Хаад Рин</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">На следующий день</td></tr>
                 <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Чалоклум</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">На следующий день</td></tr>
-                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Баан Тай</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">В тот же день – на следующий</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">Баан Тай</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">На следующий день</td></tr>
             </tbody>
         </table>
     </div>
-    <h2 style="font-size:22px;font-weight:600;color:#1f1919;margin:18px 0 8px;border-left:4px solid #e88800;padding-left:12px;text-align:center;">❓ Вопросы и ответы</h2>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">Как быстро доставка?</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">В тот же день в районе Тонгсалы и Сритану при заказе до 15:00; на следующий день — для Чалоклума, Хаад Рин и Баан Тай.</div></div>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">Можно настроить регулярный заказ?</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">Да, можно раз в неделю или раз в две недели, чтобы вода никогда не заканчивалась.</div></div>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">Сдаёте ли вы в аренду помпы или кулеры?</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">Да, оба варианта доступны в аренду, если ваш сломан или отсутствует.</div></div>
+    <h2>Что обычно входит в доставку воды</h2>
+    <p class="justifyfull">Стандартный заказ — это бутыли 19Л, привезённые до двери; количество и адрес согласуются по телефону или в сообщении. Помимо этого услуга обычно включает:</p>
+    <ul>
+        <li>разовые заказы, когда вода заканчивается, или регулярный график раз в неделю или раз в две недели</li>
+        <li>аренду ручной помпы или кулера с горячей и холодной водой, если в доме нет рабочего оборудования</li>
+        <li>большие объёмы для гестхаусов, офисов и мероприятий</li>
+        <li>оплату наличными, переводом или через PromptPay</li>
+    </ul>
+    <h2>Кому это нужно: типичные ситуации на Ко Пхангане</h2>
+    <p class="justifyfull">Многие местные жители и гости предпочитают пить бутилированную воду, поэтому бутыли 19Л — обычная вещь в арендованном жилье по всему острову. Типичные случаи:</p>
+    <ul>
+        <li>долгосрочные арендаторы вилл и кондо, которым нужны стабильные поставки без таскания тяжёлых бутылей</li>
+        <li>новые жильцы, которым помпа или кулер нужны с первого дня</li>
+        <li>владельцы гестхаусов и небольшого бизнеса, у которых число гостей меняется от недели к неделе</li>
+        <li>семьи, компании и ретриты на несколько недель, а также мероприятия, которым нужен разовый большой объём</li>
+        <li>владельцы недвижимости, которые готовят дом к приезду гостей</li>
+    </ul>
+    <h2>Как подготовиться к заказу</h2>
+    <p class="justifyfull">Несколько минут подготовки сделают первую доставку проще:</p>
+    <ul>
+        <li>посчитайте, сколько человек живёт в доме, и прикиньте расход бутылей в неделю; начните с этого числа и скорректируйте после первых доставок</li>
+        <li>проверьте, есть ли у вас помпа или кулер и работают ли они, и сообщите, если нужна аренда</li>
+        <li>пришлите адрес с меткой на карте или коротким описанием, как найти дом, особенно если он на небольшой боковой дороге</li>
+        <li>решите, как будете платить: наличными, переводом или через PromptPay</li>
+        <li>скажите, где можно оставить бутыли или кто их примет</li>
+        <li>если нужна доставка в тот же день в Тонгсале или Сритану, заказывайте до 15:00</li>
+    </ul>
+    <h2>От чего зависит итоговая стоимость</h2>
+    <p class="justifyfull">Цены за бутыль и аренду за месяц указаны в таблице выше. Итоговая сумма обычно зависит от:</p>
+    <ul>
+        <li>количества бутылей в заказе</li>
+        <li>того, разовый это заказ или регулярный график, — цена за бутыль в этих случаях разная</li>
+        <li>того, добавляете ли вы аренду помпы или кулера, которая оплачивается помесячно</li>
+        <li>объёма крупного заказа для гестхауса, офиса или мероприятия; в нестандартных случаях лучше заранее уточнить у нас итоговую сумму</li>
+    </ul>
+    <h2>Когда нужна не доставка, а другой специалист</h2>
+    <p class="justifyfull">Доставка воды — дело простое, но иногда проблема не в самой воде:</p>
+    <ul>
+        <li>если ваша помпа или кулер перестали работать, быстрое решение — взять в аренду другие; неисправность проводки или кулер, который выбивает автомат, — задача для <a href="../../ru/electrician-koh-phangan/">электрика</a></li>
+        <li>если текут трубы, капризничает бак или слабый напор воды, нужен <a href="../../ru/plumber-koh-phangan/">сантехник</a></li>
+        <li>выезд на место для бутилей обычно не требуется: достаточно адреса, количества бутылей и пары слов о том, как к вам подъехать</li>
+    </ul>
+
+    <h2 style="font-size:22px;font-weight:600;color:#1f1919;margin:18px 0 8px;border-left:4px solid #9c5400;padding-left:12px;text-align:center;">❓ Вопросы и ответы</h2>
+<div class="faq-section">
+<details class="faq-details"><summary>Как быстро доставка?</summary><div class="faq-answer"><p>В тот же день в районе Тонгсалы и Сритану при заказе до 15:00; на следующий день — для Чалоклума, Хаад Рин и Баан Тай.</p></div></details>
+<details class="faq-details"><summary>Можно настроить регулярный заказ?</summary><div class="faq-answer"><p>Да, можно раз в неделю или раз в две недели, чтобы вода никогда не заканчивалась.</p></div></details>
+<details class="faq-details"><summary>Сдаёте ли вы в аренду помпы или кулеры?</summary><div class="faq-answer"><p>Да, оба варианта доступны в аренду, если ваш сломан или отсутствует.</p></div></details>
+<details class="faq-details"><summary>Сколько бутылей 19Л нужно на семью?</summary><div class="faq-answer"><p>Это зависит от числа жильцов и от того, сколько воды вы расходуете на питьё и готовку. Сообщите нам, сколько человек живёт в доме, начните с небольшого объёма раз в неделю или раз в две недели и скорректируйте после первых доставок.</p></div></details>
+<details class="faq-details"><summary>Можете ли вы снабжать гестхаус, офис или мероприятие?</summary><div class="faq-answer"><p>Да, крупные заказы для гестхаусов, офисов и мероприятий входят в услугу. Напишите нам количество, адрес и дату, к которой нужна вода, и мы уточним детали.</p></div></details>
+<details class="faq-details"><summary>Что делать, если во время доставки никого нет на месте?</summary><div class="faq-answer"><p>Лучше заранее сообщить, где можно оставить бутыли или кто может их принять, и подтвердить это в сообщении при заказе.</p></div></details>
+</div>
+
+
 
     <div class="cta-block">
         <h2>📞 Позвонить</h2>
         <div class="phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
         <div class="hours">⚡ Работаем 8:00–20:00</div>
-        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#25D366;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
+        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#0b7f43;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
     </div>
-    </div></section>
+    </div></main>
     <div class="related-services">
         <h2>🏠 Услуги</h2>
         <div class="related-grid">
@@ -313,18 +344,18 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>BroService.in.th</h4>
+                    <h4 role="heading" aria-level="3">BroService.in.th</h4>
                     <p>Ваша местная служба сервиса на Ко Пхангане.</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Услуги</h4>
+                    <h4 role="heading" aria-level="3">Услуги</h4>
                     <ul class="footer-links">
                         <li><a href="../../ru/water-delivery-koh-phangan/">🚰 Доставка воды</a></li>
                         <li><a href="../../ru/cleaning-koh-phangan/">🧹 Уборка</a></li>
@@ -332,10 +363,13 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                         <li><a href="../../ru/ac-service-koh-phangan/">❄️ Кондиционеры</a></li>
                         <li><a href="../../ru/electrician-koh-phangan/">⚡ Электрик</a></li>
                         <li><a href="../../ru/bike-service-koh-phangan/">🛵 Байк-сервис</a></li>
+                        <li><a href="../remont-telefonov-i-tehniki-koh-phangan/">📱 Ремонт телефонов и техники</a></li>
+                        <li><a href="../dostavka-tsvetov-koh-phangan/">🌸 Доставка цветов</a></li>
+                        <li><a href="../property-rental-koh-phangan/">🏠 Аренда жилья</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Контакты</h4>
+                    <h4 role="heading" aria-level="3">Контакты</h4>
                     <ul class="footer-links">
                         <li><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></li>
                         <li><a href="mailto:info@broservice.in.th">✉️ info@broservice.in.th</a></li>
@@ -344,17 +378,20 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Инфо</h4>
+                    <h4 role="heading" aria-level="3">Инфо</h4>
                     <ul class="footer-links">
                         <li><a href="../../ru/">Услуги</a></li>
                         <li><a href="../../ru/contacts/">Контакты</a></li>
-                        <li><a href="../../ru/sitemap.xml" target="_blank">Карта сайта</a></li>
+                        <li><a href="../about/">О нас</a></li>
+                        <li><a href="../privacy/">Конфиденциальность</a></li>
+                        <li><a href="../../sitemap.xml" target="_blank" rel="noopener">Карта сайта</a></li>
+                        <li><a href="#" data-consent-settings hidden></a></li>
                         <li><span style="color: #888;">⚡ Работаем 8:00–20:00</span></li>
                         <li><span style="color: #888;">🌴 Ко Пханган, Таиланд</span></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Areas</h4>
+                    <h4 role="heading" aria-level="3">Areas</h4>
                     <ul class="footer-links">
                         <li><a href="../../ru/thong-sala-koh-phangan/">📍 Thong Sala</a></li>
                         <li><a href="../../ru/srithanu-koh-phangan/">📍 Srithanu</a></li>
@@ -371,7 +408,7 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </footer>
     <div class="sticky-cta-bar" id="stickyCta">
     <a href="https://wa.me/+66808705704" class="cta-whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">📞 Позвонить</a>
+    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">✈️ Telegram</a>
 </div>
 <script>
 (function(){
@@ -399,5 +436,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
   drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 })();
 </script>
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/consent-analytics.js" defer></script>
+<script src="../../assets/js/a11y.js" defer></script>
 </body>
 </html>

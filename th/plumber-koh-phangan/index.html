@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>ช่างประปาบนเกาะพะงัน | BroService</title>
     <meta name="description" content="ก๊อกน้ำรั่ว ท่ออุดตัน ท่อแตก และซ่อมห้องน้ำทั่วเกาะพะงัน">
-    <link rel="icon" href="../../th/assets/images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    <link rel="preload" href="../../assets/fonts/inter-latin-1ab1ad.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/open-sans-latin-2808bc.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
     <link rel="canonical" href="https://broservice.in.th/th/plumber-koh-phangan/">
     <meta property="og:title" content="ช่างประปาบนเกาะพะงัน | BroService">
     <meta property="og:description" content="ก๊อกน้ำรั่ว ท่ออุดตัน ท่อแตก และซ่อมห้องน้ำทั่วเกาะพะงัน">
@@ -17,150 +18,81 @@
     <meta property="og:site_name" content="BroService.in.th">
     <meta property="og:locale" content="th_TH">
     <meta property="og:image" content="https://broservice.in.th/assets/images/plumber.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="533">
+    <meta property="og:image:alt" content="ช่างประปาบนเกาะพะงัน">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ช่างประปาบนเกาะพะงัน | BroService">
     <meta name="twitter:description" content="ก๊อกน้ำรั่ว ท่ออุดตัน ท่อแตก และซ่อมห้องน้ำทั่วเกาะพะงัน">
     <meta name="twitter:image" content="https://broservice.in.th/assets/images/plumber.jpg">
+    <meta name="twitter:image:alt" content="ช่างประปาบนเกาะพะงัน">
     <link rel="alternate" hreflang="en" href="https://broservice.in.th/plumber-koh-phangan/">
-    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/plumber-koh-phangan/">
     <link rel="alternate" hreflang="ru" href="https://broservice.in.th/ru/plumber-koh-phangan/">
     <link rel="alternate" hreflang="th" href="https://broservice.in.th/th/plumber-koh-phangan/">
     <link rel="alternate" hreflang="he" href="https://broservice.in.th/he/plumber-koh-phangan/">
-    <style>
-:root {
-    --primary: #e88800;
-    --primary-dark: #c47000;
-    --dark: #1a1414;
-    --dark2: #2b2424;
-    --darker: #1f1919;
-    --bg: #edeef0;
-    --text-light: #8f8b8c;
-    --white: #fff;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #000; background: var(--dark); line-height: 1.65; font-size: 16px; }
-.container { max-width: 960px; margin: 0 auto; padding: 0 15px; }
-a { text-decoration: none; color: var(--primary); }
-a:hover { text-decoration: underline; }
-header { background: linear-gradient(180deg, var(--dark2), var(--darker)); padding: 4px 0 0; position: sticky; top: 0; z-index: 100; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 0 2px; }
-.logo { font-family: Inter, sans-serif; font-size: 22px; font-weight: 700; color: var(--primary); text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
-.logo span { color: #d3d3d3; font-weight: 300; }
-.header-right { display: flex; align-items: center; gap: 8px; }
-.header-phone { font-size: 16px; font-weight: bold; }
-.header-phone a { color: #e88800; font-weight: bold; }
-.social-icons { display: flex; gap: 3px; }
-.social-icons a { display: inline-block; transition: opacity 0.2s; }
-.social-icons a:hover { opacity: 0.7; }
-.social-icons svg { width: 22px; height: 22px; border-radius: 50%; display: block; }
-nav { background: linear-gradient(180deg, #e57c00, #c47000); border-radius: 6px 6px 0 0; margin-top: 4px; }
-ul.menu { display: flex; justify-content: center; flex-wrap: nowrap; list-style: none; padding: 4px 4px; }
-ul.menu li { display: inline-block; line-height: 16px; margin: 2px 1px; padding: 4px 6px; border-radius: 5px; transition: background 0.2s; }
-ul.menu li:hover { background: rgba(0,0,0,0.08); }
-ul.menu li a { font-size: 13px; line-height: 16px; color: #1f1919; font-weight: 600; white-space: nowrap; }
-ul.menu li a:hover { color: #fff; }
-ul.menu li.active { background: rgba(0,0,0,0.1); }
-ul.menu li.active a { color: #fff; }
-.breadcrumbs { background: var(--bg); padding: 6px 0; font-size: 13px; color: #888; }
-.breadcrumbs a { color: var(--primary); }
-#content { background: var(--bg); padding: 20px 0 25px; text-align: center; }
-#content p, #content li, #content .justifyfull { text-align: left; max-width: 700px; margin: 10px auto; }
-#content ul { display: inline-block; text-align: left; max-width: 600px; padding-left: 35px; }
-#content h1 { font-family: Inter, sans-serif; font-size: 28px; font-weight: 700; color: #1f1919; margin-bottom: 14px; }
-#content h2 { font-family: Inter, sans-serif; font-size: 22px; font-weight: 600; color: #1f1919; margin: 18px 0 8px; border-left: 4px solid var(--primary); padding-left: 12px; text-align: center; }
-#content h3 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; color: var(--primary); margin: 16px 0 6px; text-align: center; }
-#content p { margin: 10px 0; color: #444; line-height: 1.65; }
-#content .justifyfull { text-align: justify; }
-#content ul { margin: 10px 0 16px; padding-left: 20px; list-style: none; }
-#content ul li { margin: 5px 0; padding-left: 20px; position: relative; }
-#content ul li::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
-#content table { margin: 15px auto !important; }
-#content .faq-item { text-align: left; max-width: 700px; margin: 0 auto; }
-.float-img { float: right; margin: 0 0 15px 20px; border-radius: 8px; max-width: 40%; }
-img { max-width: 100%; height: auto; border-radius: 7px; }
-#content img { max-width: 100%; height: auto; max-height: 400px; object-fit: contain; }
-.cta-block { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); padding: 24px 20px; border-radius: 10px; text-align: center; margin: 20px 0; }
-.cta-block h2 { color: var(--white) !important; font-size: 24px !important; border: none !important; padding: 0 !important; margin-bottom: 10px !important; }
-.cta-block .phone { font-size: 28px; font-weight: 700; margin: 10px 0; }
-.cta-block .phone a { color: var(--white); }
-.cta-block .hours { font-size: 14px; opacity: 0.9; }
-.usp-bar { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; background:#fff; padding:12px 15px; margin:0; border-bottom:3px solid var(--primary); font-size:13px; color:#333; font-weight:600; }
-.usp-bar span { display:flex; align-items:center; gap:6px; white-space:nowrap; }
-.related-services { max-width:960px; margin:0 auto; padding:25px 15px; background:var(--bg); }
-.related-services h2 { font-family: Inter, sans-serif; font-size:20px; font-weight:600; color:#1f1919; text-align:center; margin-bottom:14px; }
-.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.related-grid a { display:block; background:#fff; border-radius:8px; padding:16px 10px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,0.08); color:#1f1919; font-weight:600; font-size:14px; transition:transform .15s; }
-.related-grid a:hover { transform:translateY(-3px); text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.12); }
-.related-grid .emoji { display:block; font-size:26px; margin-bottom:6px; }
-footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
-.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-bottom: 20px; }
-.footer-col h4 { font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
-.footer-col p { font-size: 13px; line-height: 1.5; color: #aaa; }
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 6px; }
-.footer-links a { font-size: 13px; color: #aaa; }
-.footer-links a:hover { color: var(--primary); }
-.footer-social { display: flex; gap: 6px; margin-top: 10px; }
-.footer-social a:hover { opacity: 0.7; }
-.footer-social svg { width: 22px; height: 22px; border-radius: 50%; }
-.footer-bottom { border-top: 1px solid #333; padding-top: 15px; text-align: center; font-size: 13px; color: #888; }
-.footer-bottom a { color: var(--primary); }
-.menu-toggle { display:none; }
-.mobile-drawer, .drawer-overlay { display:none; }
-.sticky-cta-bar { display:none; }
-@media only screen and (max-width: 768px) {
-    nav { display:none; }
-    .menu-toggle { display:flex; align-items:center; justify-content:center; background:none; border:none; color:#fff; font-size:26px; cursor:pointer; padding:4px 8px; }
-    .drawer-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:299; }
-    .drawer-overlay.open { display:block; }
-    .mobile-drawer { display:block; position:fixed; top:0; right:-82%; width:78%; max-width:320px; height:100%; background:var(--darker); z-index:300; transition:right .25s ease; box-shadow:-4px 0 18px rgba(0,0,0,0.35); overflow-y:auto; }
-    .mobile-drawer.open { right:0; }
-    .drawer-close { text-align:right; padding:14px 18px 0; }
-    .drawer-close button { background:none; border:none; color:#fff; font-size:30px; cursor:pointer; line-height:1; }
-    .mobile-drawer ul { list-style:none; padding:6px 22px 24px; margin:0; }
-    .mobile-drawer ul li { padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.09); }
-    .mobile-drawer ul li a { color:#fff; font-size:16px; font-weight:600; display:block; }
-    .mobile-drawer ul li.active a { color:var(--primary); }
-    .mobile-drawer .drawer-lang { padding:16px 22px; display:flex; gap:14px; font-size:14px; }
-    .mobile-drawer .drawer-lang a { color:#aaa; font-weight:600; }
-    .mobile-drawer .drawer-lang a.active-lang { color:var(--primary); }
-    .header-right { flex-direction: column; gap: 5px; }
-    #content h1 { font-size: 22px; }
-    #content h2 { font-size: 18px; }
-    .float-img { float: none; margin: 0 auto 15px; max-width: 100%; }
-    .footer-grid { grid-template-columns: 1fr; padding: 0 15px; gap: 10px; }
-    .header-inner { flex-direction: column; text-align: center; }
-    .usp-bar { font-size:11px; gap:6px 12px; padding:8px 10px; }
-    .related-grid { grid-template-columns:1fr 1fr; }
-    .sticky-cta-bar { display:flex; position:fixed; bottom:0; left:0; right:0; z-index:200; box-shadow:0 -2px 12px rgba(0,0,0,0.18); }
-    .sticky-cta-bar a { flex:1; text-align:center; padding:13px 0; font-size:14px; font-weight:700; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px; }
-    .sticky-cta-bar .cta-whatsapp { background:#25D366; color:#fff; }
-    .sticky-cta-bar .cta-telegram { background:#0088cc; color:#fff; }
-    body { padding-bottom: 52px; }
-}
-</style>
+    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/plumber-koh-phangan/">
+    <link rel="stylesheet" href="../../assets/css/tpl-1449763b.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "BroService.in.th",
+  "@id": "https://broservice.in.th/#localbusiness",
+  "name": "BroService",
+  "url": "https://broservice.in.th/",
   "telephone": "+66808705704",
-  "url": "https://broservice.in.th/th/plumber-koh-phangan/",
+  "email": "info@broservice.in.th",
   "areaServed": [
-    "Thong Sala",
-    "Srithanu",
-    "Haad Rin",
-    "Chaloklum",
-    "Baan Tai",
-    "Koh Phangan"
+    {
+      "@type": "Place",
+      "name": "Koh Phangan"
+    },
+    {
+      "@type": "Place",
+      "name": "Thong Sala"
+    },
+    {
+      "@type": "Place",
+      "name": "Srithanu"
+    },
+    {
+      "@type": "Place",
+      "name": "Haad Rin"
+    },
+    {
+      "@type": "Place",
+      "name": "Baan Tai"
+    },
+    {
+      "@type": "Place",
+      "name": "Chaloklum"
+    }
   ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Koh Phangan",
     "addressRegion": "Surat Thani",
     "addressCountry": "TH"
-  }
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+        "https://schema.org/Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://facebook.com/broservice.kohphangan",
+    "https://instagram.com/broservice_kohphangan"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -191,6 +123,30 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
         "@type": "Answer",
         "text": "รับครับ เราอัพเกรดอุปกรณ์ห้องน้ำในงานปรับปรุงด้วย"
       }
+    },
+    {
+      "@type": "Question",
+      "name": "ส่งรูปหรือวิดีโอของปัญหาให้ดูได้ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ครับ รูปหรือวิดีโอสั้นๆ ทาง WhatsApp หรือ Telegram ช่วยให้เราเข้าใจปัญหา และมักช่วยให้วินิจฉัยทางโทรศัพท์ได้ดีขึ้นก่อนช่างไปถึง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ระหว่างรอช่างประปาควรทำอย่างไร",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "หากน้ำรั่วออกมา ให้ปิดวาล์วที่ใกล้ที่สุดหรือวาล์วน้ำหลักหากทำได้ และย้ายของออกจากบริเวณที่เปียก"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ท่ออุดตันซ้ำๆ แก้ครั้งเดียวจบไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นอยู่กับสาเหตุ การอุดตันครั้งเดียวแก้ได้เร็ว แต่ถ้าอุดตันซ้ำอาจมีปัญหาลึกกว่านั้นในท่อ ซึ่งประเมินได้ง่ายกว่าเมื่อดูหน้างาน"
+      }
     }
   ]
 }
@@ -203,8 +159,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Services",
-      "item": "https://broservice.in.th/"
+      "name": "บริการ",
+      "item": "https://broservice.in.th/th/"
     },
     {
       "@type": "ListItem",
@@ -214,21 +170,23 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     }
   ]
 }
-</script>
+</script><link rel="stylesheet" href="../../assets/css/common.css">
+<noscript><link rel="stylesheet" href="../../assets/css/noscript.css"></noscript>
 </head>
 <body>
+<a class="skip-link" href="#content">ข้ามไปยังเนื้อหา</a>
     <header>
         <div class="container">
             <div class="header-inner">
-                <div class="logo" onclick="window.location='../../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
+                <div class="logo" onclick="window.location='../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
                 <div class="header-right">
                     <div class="header-phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
                     <div class="social-icons">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
             </div>
@@ -237,11 +195,11 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
             <div class="mobile-drawer" id="mobileDrawer">
                 <div class="drawer-close"><button id="drawerClose" aria-label="Close">×</button></div>
                 <ul><li><a href="../../th/">🏠 บริการ</a></li><li><a href="../../th/water-delivery-koh-phangan/">🚰 น้ำดื่ม</a></li><li><a href="../../th/bike-service-koh-phangan/">🛵 มอเตอร์ไซค์</a></li><li><a href="../../th/cleaning-koh-phangan/">🧹 ทำความสะอาด</a></li><li><a href="../../th/ac-service-koh-phangan/">❄️ แอร์</a></li><li class="active"><a href="../../th/plumber-koh-phangan/">🔧 ช่างประปา</a></li><li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟ</a></li><li><a href="../../th/handyman-koh-phangan/">🔨 ช่างซ่อมทั่วไป</a></li><li><a href="../../th/contacts/">✉️ ติดต่อ</a></li></ul>
-                <div class="drawer-lang"><a href="../../th/plumber-koh-phangan/">EN</a><a href="../../../ru/plumber-koh-phangan/">RU</a><a href="../../th/plumber-koh-phangan/" class="active-lang">TH</a><a href="../../../he/plumber-koh-phangan/">HE</a></div>
+                <div class="drawer-lang"><a href="../../plumber-koh-phangan/">EN</a><a href="../../ru/plumber-koh-phangan/">RU</a><a href="./" class="active-lang">TH</a><a href="../../he/plumber-koh-phangan/">HE</a></div>
             </div>
-            <nav><ul class="menu"><li><a href="../../">🏠 บริการ</a></li><li><a href="../../th/water-delivery-koh-phangan/">🚰 น้ำดื่ม</a></li><li><a href="../../th/bike-service-koh-phangan/">🛵 มอเตอร์ไซค์</a></li><li><a href="../../th/cleaning-koh-phangan/">🧹 ทำความสะอาด</a></li><li><a href="../../th/ac-service-koh-phangan/">❄️ แอร์</a></li><li class="active"><a href="../../th/plumber-koh-phangan/">🔧 ช่างประปา</a></li><li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟ</a></li><li><a href="../../th/handyman-koh-phangan/">🔨 ช่างซ่อมทั่วไป</a></li><li><a href="../../th/contacts/">✉️ ติดต่อ</a></li></ul></nav>
+            <nav><ul class="menu"><li><a href="../">🏠 บริการ</a></li><li><a href="../../th/water-delivery-koh-phangan/">🚰 น้ำดื่ม</a></li><li><a href="../../th/bike-service-koh-phangan/">🛵 มอเตอร์ไซค์</a></li><li><a href="../../th/cleaning-koh-phangan/">🧹 ทำความสะอาด</a></li><li><a href="../../th/ac-service-koh-phangan/">❄️ แอร์</a></li><li class="active"><a href="../../th/plumber-koh-phangan/">🔧 ช่างประปา</a></li><li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟ</a></li><li><a href="../../th/handyman-koh-phangan/">🔨 ช่างซ่อมทั่วไป</a></li><li><a href="../../th/contacts/">✉️ ติดต่อ</a></li></ul></nav>
         </div>
-    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../../plumber-koh-phangan/">EN</a> <a href="../../../ru/plumber-koh-phangan/">RU</a> <a href="../../../th/plumber-koh-phangan/">TH</a> <a href="../../../he/plumber-koh-phangan/">HE</a></div>
+    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../plumber-koh-phangan/">EN</a> <a href="../../ru/plumber-koh-phangan/">RU</a> <a href="./">TH</a> <a href="../../he/plumber-koh-phangan/">HE</a></div>
     </header>
     <div class="usp-bar">
         <span>⚡ บริการวันเดียวกัน</span>
@@ -254,29 +212,58 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </div>
     <div class="service-hero">
         <div class="container">
-            <img loading="lazy" width="800" height="533" src="../../assets/images/plumber.jpg" alt="ช่างประปาบนเกาะพะงัน">
+            <picture><source type="image/webp" srcset="../../assets/images/plumber-400.webp 400w, ../../assets/images/plumber.webp 800w" sizes="(max-width: 800px) 100vw, 800px"><img fetchpriority="high" decoding="async" width="800" height="533" src="../../assets/images/plumber.jpg" alt="ภาพประกอบ: ท่อและประแจ"></picture>
         </div>
     </div>
-    <section id="content"><div class="container">
+    <main id="content"><div class="container">
     <h1>🔧 ช่างประปาบนเกาะพะงัน</h1>
-    <div style="background:#f8f6f0;border-left:4px solid #e88800;padding:16px;margin:20px 0;border-radius:4px;"><strong>งานประปาบนเกาะมีลักษณะเฉพาะตัว ไอเค็มจากทะเล น้ำกระด้าง ท่อเก่าในบ้านหมู่บ้านชาวประมงช่อลกลำ เทียบกับบ้านสร้างใหม่ในศรีธนู</strong></div>
+    <div style="background:#f8f6f0;border-left:4px solid #9c5400;padding:16px;margin:20px 0;border-radius:4px;"><strong>งานประปาบนเกาะมีลักษณะเฉพาะตัว ไอเค็มจากทะเล น้ำกระด้าง ท่อเก่าในบ้านหมู่บ้านชาวประมงช่อลกลำ เทียบกับบ้านสร้างใหม่ในศรีธนู</strong></div>
     <h2>บริการนี้ครอบคลุมอะไรบ้าง</h2>
     <ul>
-        <li>ซ่อมรอยรั่วและท่ออุดตัน อุปกรณ์ทุกชนิด</li>
-        <li>เปลี่ยนท่อที่เป็นสนิมหรือแตก</li>
-        <li>วินิจฉัยแรงดันน้ำ</li>
-        <li>ตรวจเช็คเชิงป้องกันสำหรับวิลล่าและบ้านเช่า</li>
+        <li><strong>ซ่อมก๊อกน้ำ</strong> — แก้ปัญหาน้ำรั่วและน้ำหยด</li>
+        <li><strong>แก้ท่ออุดตัน</strong> — อ่างล้างหน้า ฝักบัว และโถสุขภัณฑ์ที่ตัน</li>
+        <li><strong>ซ่อมท่อ</strong> — ซ่อมหรือเปลี่ยนท่อที่เป็นสนิมหรือแตก</li>
+        <li><strong>บริการเครื่องทำน้ำอุ่น</strong> — ติดตั้ง ซ่อม ล้างตะกอน</li>
+        <li><strong>รีโนเวทห้องน้ำ</strong> — เปลี่ยนอุปกรณ์ทั้งชุด</li>
+        <li><strong>งานฉุกเฉิน</strong> — ตอบสนองรวดเร็วเมื่อมีน้ำรั่วเร่งด่วน</li>
     </ul>
     <h2>ขั้นตอนการทำงาน</h2>
     <ol style="max-width:600px;margin:10px auto 16px;text-align:left;padding-left:20px;">
-        <li style="margin:5px 0;">ทักหรือโทรมาบอกอาการที่พบ</li>
-        <li style="margin:5px 0;">เราวินิจฉัยเบื้องต้นทางโทรศัพท์และแจ้งราคาอย่างตรงไปตรงมา</li>
-        <li style="margin:5px 0;">เราไปถึง ลงมือทำงาน และรับประกันผลงาน</li>
+        <li style="margin:5px 0;"><strong>โทร</strong> — แจ้งปัญหาทางโทรศัพท์ WhatsApp หรือ Telegram</li>
+        <li style="margin:5px 0;"><strong>วินิจฉัยทางโทรศัพท์</strong> — เรามักระบุสาเหตุที่น่าจะเป็นได้ก่อนไปถึง</li>
+        <li style="margin:5px 0;"><strong>เสนอราคา</strong> — แจ้งราคาประเมินที่ชัดเจนก่อนเริ่มงาน</li>
+        <li style="margin:5px 0;"><strong>ซ่อม</strong> — ซ่อมเสร็จด้วยอะไหล่คุณภาพ</li>
+        <li style="margin:5px 0;"><strong>รับประกัน</strong> — รับประกันงานทุกชิ้น</li>
     </ol>
     <p class="justifyfull">เราแก้ปัญหาประปาทุกรูปแบบทั่วเกาะพะงัน ก๊อกน้ำรั่ว ท่อระบายอุดตัน ท่อแตกหรือเป็นสนิม ปัญหาแรงดันน้ำ และซ่อมหรืออัพเกรดอุปกรณ์ห้องน้ำแบบครบวงจร เราทำงานในท้องศาลา ศรีธนู หาดริ้น ช่อลกลำ และบ้านใต้ และมักให้คำวินิจฉัยเบื้องต้นทางโทรศัพท์ได้</p>
     <p class="justifyfull">สำหรับเจ้าของวิลล่าและผู้จัดการอสังหาริมทรัพย์ เรายังตรวจเช็คเชิงป้องกัน จับรอยรั่วเล็กๆ ก่อนที่จะกลายเป็นงานซ่อมผนัง หรือล้างตะกอนในเครื่องทำน้ำอุ่นที่ประสิทธิภาพลดลง</p>
     <p class="justifyfull">งานส่วนใหญ่ในย่านท้องศาลาและศรีธนูไปถึงวันเดียวกัน ส่วนพื้นที่ไกลออกไปเราจะแจ้งเวลาที่เหมาะสมตอนโทรเข้ามา</p>
+    <h2>💰 ราคา</h2>
+    <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
+            <thead><tr style="background:var(--primary);color:#fff;"><th style="padding:10px 12px;text-align:left;">บริการ</th><th style="padding:10px 12px;text-align:left;">ราคา</th><th style="padding:10px 12px;text-align:left;">รายละเอียด</th></tr></thead>
+            <tbody>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ซ่อมก๊อกน้ำ</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿300-500</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ต่อจุด</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">แก้ท่ออุดตัน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿400-800</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ต่อท่อระบายน้ำ</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ซ่อมท่อ</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿500-1,500</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ขึ้นอยู่กับขอบเขตงาน</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">บริการเครื่องทำน้ำอุ่น</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿600-1,200</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ล้างตะกอนหรือซ่อม</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">รีโนเวทห้องน้ำ</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">เริ่มที่ ฿15,000</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">รีโนเวททั้งห้อง</td></tr>
+            </tbody>
+        </table>
+    </div>
+<p class="price-note" style="font-size:13px;color:#595959;text-align:center;margin:4px 0 14px;">ราคาโดยประมาณเป็นเงินบาท (฿) ราคาสุดท้ายขึ้นอยู่กับงานและจะแจ้งให้คุณทราบล่วงหน้า อัปเดตล่าสุด 17 พฤศจิกายน 2569</p>
+
+    <h2>✅ ทำไมต้องเลือก BroService?</h2>
+    <ul>
+        <li><strong>วินิจฉัยทางโทรศัพท์</strong> — มักระบุปัญหาได้ก่อนไปถึง</li>
+        <li><strong>ตรวจเช็คเชิงป้องกัน</strong> — จับรอยรั่วเล็กๆ ก่อนกลายเป็นงานซ่อมใหญ่</li>
+        <li><strong>ราคายุติธรรม</strong> — แจ้งราคาชัดเจนก่อนเริ่มงานทุกครั้ง</li>
+        <li><strong>รับประกันรวมอยู่แล้ว</strong> — คุ้มครองงานทั้งหมด</li>
+        <li><strong>ทั่วทั้งเกาะ</strong> — ให้บริการทุกพื้นที่บนเกาะพะงัน</li>
+    </ul>
+
     <h2>พื้นที่ให้บริการและเวลาตอบสนอง</h2>
+    <p class="justifyfull">เราให้บริการทั่วเกาะพะงัน ได้แก่ <strong>ท้องศาลา</strong> <strong>ศรีธนู</strong> <strong>หาดริ้น</strong> <strong>ช่อลกลำ</strong> <strong>บ้านใต้</strong> และพื้นที่ใกล้เคียง</p>
     <div style="overflow-x:auto;">
         <table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
             <thead><tr style="background:var(--primary);color:#fff;"><th style="padding:10px 12px;text-align:left;">พื้นที่</th><th style="padding:10px 12px;text-align:left;">เวลาตอบสนองโดยทั่วไป</th></tr></thead>
@@ -288,21 +275,58 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
             </tbody>
         </table>
     </div>
-    <h2 style="font-size:22px;font-weight:600;color:#1f1919;margin:18px 0 8px;border-left:4px solid #e88800;padding-left:12px;text-align:center;">❓ คำถามที่พบบ่อย</h2>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">รับซ่อมกรณีฉุกเฉินไหม</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">รับครับ โทรหรือแชท WhatsApp เราจะแจ้งเวลาที่เหมาะสมตามพื้นที่ของคุณ</div></div>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">ซ่อมเครื่องทำน้ำอุ่นได้ไหม</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">ได้ครับ รวมถึงล้างตะกอนและเปลี่ยนเครื่องใหม่หากจำเป็น</div></div>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">รับงานปรับปรุงวิลล่าไหม</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">รับครับ เราอัพเกรดอุปกรณ์ห้องน้ำในงานปรับปรุงด้วย</div></div>
+    <h2>การเข้าซ่อมงานประปาโดยทั่วไปมีอะไรบ้าง</h2>
+    <p class="justifyfull">โดยทั่วไปการเข้าซ่อมจะเริ่มจากหาต้นเหตุของปัญหา จากนั้นซ่อมหรือเปลี่ยนชิ้นส่วนที่เสีย และสุดท้ายตรวจสอบว่าน้ำไหล ระบายน้ำ และปิดน้ำได้เป็นปกติ เช่น ก๊อกน้ำหยดอาจต้องเปลี่ยนวาล์วหรือแหวนยาง ท่ออุดตันคือการล้างท่อและทดสอบว่าน้ำไหลคล่อง ส่วนท่อรั่วคือตัดส่วนที่เสียหายออกแล้วต่อท่อใหม่แทน หากอุปกรณ์หรือเครื่องทำน้ำอุ่นซ่อมไม่ได้ เราสามารถคุยทางเลือกในการเปลี่ยนใหม่กับคุณได้</p>
+
+    <h2>ใครบ้างที่ต้องการช่างประปาบนเกาะพะงัน</h2>
+    <ul>
+<li><strong>เจ้าของวิลล่าและบ้าน</strong> — เจอปัญหาน้ำรั่ว น้ำไหลอ่อน หรือระบายน้ำช้า โดยเฉพาะบ้านเก่าที่ไอเค็มและน้ำกระด้างทำให้อุปกรณ์เสื่อม</li>
+<li><strong>ผู้จัดการบ้านเช่า</strong> — เตรียมห้องระหว่างแขกเข้าพัก เมื่อต้องรีบแก้โถส้วมที่น้ำไหลไม่หยุดหรือก๊อกน้ำหยด</li>
+<li><strong>ผู้พักระยะยาวและผู้เช่า</strong> — ที่อยากแจ้งเจ้าของบ้านโดยรู้ว่าเสียตรงไหน</li>
+<li><strong>เจ้าของบ้านสร้างใหม่</strong> — ติดตั้งอุปกรณ์สุขภัณฑ์ ติดตั้งเครื่องทำน้ำอุ่น หรือตรวจสอบก่อนแขกหรือผู้เช่าเข้าอยู่</li>
+</ul>
+
+    <h2>เตรียมตัวอย่างไรก่อนช่างมา</h2>
+    <ul>
+<li>จดไว้ว่าปัญหาอยู่ตรงไหน เริ่มเมื่อไร และเป็นตลอดเวลาหรือเกิดเฉพาะตอนใช้ก๊อกหรืออุปกรณ์บางตัว</li>
+<li>ส่งวิดีโอสั้นๆ หรือรูปภาพทาง WhatsApp หรือ Telegram ซึ่งมักช่วยให้วินิจฉัยทางโทรศัพท์ได้ดีขึ้น</li>
+<li>หากน้ำรั่วออกมา ให้ปิดวาล์วที่ใกล้ที่สุดหรือวาล์วน้ำหลัก หากทราบตำแหน่ง</li>
+<li>เก็บของใต้อ่างล้างหน้า รอบโถส้วม หรือรอบเครื่องทำน้ำอุ่น เพื่อให้ช่างเข้าถึงท่อได้</li>
+<li>ตรวจสอบว่ามีคนเปิดประตูให้ช่างเข้าได้ และแจ้งรุ่นหรืออายุของเครื่องทำน้ำอุ่นหากทราบ</li>
+</ul>
+
+    <h2>อะไรที่มีผลต่อราคาสุดท้าย</h2>
+    <p class="justifyfull">ราคาขึ้นอยู่กับประเภทงานและปัจจัยหลายอย่าง จึงมีการแจ้งราคาประเมินให้ชัดเจนก่อนเริ่มงาน ดังนี้</p>
+<ul>
+<li>ท่อหรืออุปกรณ์เข้าถึงง่ายแค่ไหน เช่น อยู่หลังผนังกระเบื้องหรือใต้พื้นคอนกรีต</li>
+<li>สภาพและวัสดุของท่อและข้อต่อเดิม</li>
+<li>จำนวนอุปกรณ์หรือจุดระบายน้ำที่เกี่ยวข้อง</li>
+<li>อะไหล่ที่ต้องใช้ และซ่อมได้หรือต้องเปลี่ยนใหม่</li>
+<li>ระยะทางไปยังที่พักของคุณบนเกาะ และความเร่งด่วนของงาน</li>
+</ul>
+
+    <h2>เมื่อไรที่ต้องใช้ช่างสาขาอื่นหรือต้องดูหน้างาน</h2>
+    <p class="justifyfull">น้ำรั่ว ท่ออุดตัน และปัญหาสุขภัณฑ์ส่วนใหญ่ช่างประปาจัดการได้ แต่บางกรณีต้องดูให้ละเอียดขึ้น หากดูจากรูปและคำอธิบายทางโทรศัพท์แล้วยังไม่ชัดเจน การไปดูหน้างานมักเป็นวิธีเดียวที่ประเมินราคาได้แม่นยำ รอยชื้นที่ไม่หาย ท่อที่อุดตันซ้ำๆ หรือน้ำไหลอ่อนทั้งบ้าน อาจบ่งชี้ว่ามีท่อเสียที่ซ่อนอยู่หรือปัญหาที่ระบบจ่ายน้ำเอง หากเกี่ยวกับสายไฟรอบเครื่องทำน้ำอุ่นหรือปั๊มน้ำ ควรให้ช่างไฟฟ้าตรวจ และหากน้ำทำให้ผนัง เพดาน หรือกระเบื้องเสียหายแล้ว อาจต้องใช้ช่างซ่อมทั่วไปหรือช่างก่อสร้างมาซ่อมต่อ</p>
+
+    <h2 style="font-size:22px;font-weight:600;color:#1f1919;margin:18px 0 8px;border-left:4px solid #9c5400;padding-left:12px;text-align:center;">❓ คำถามที่พบบ่อย</h2>
+<div class="faq-section">
+<details class="faq-details"><summary>รับซ่อมกรณีฉุกเฉินไหม</summary><div class="faq-answer"><p>รับครับ โทรหรือแชท WhatsApp เราจะแจ้งเวลาที่เหมาะสมตามพื้นที่ของคุณ</p></div></details>
+<details class="faq-details"><summary>ซ่อมเครื่องทำน้ำอุ่นได้ไหม</summary><div class="faq-answer"><p>ได้ครับ รวมถึงล้างตะกอนและเปลี่ยนเครื่องใหม่หากจำเป็น</p></div></details>
+<details class="faq-details"><summary>รับงานปรับปรุงวิลล่าไหม</summary><div class="faq-answer"><p>รับครับ เราอัพเกรดอุปกรณ์ห้องน้ำในงานปรับปรุงด้วย</p></div></details>
+<details class="faq-details"><summary>ส่งรูปหรือวิดีโอของปัญหาให้ดูได้ไหม</summary><div class="faq-answer"><p>ได้ครับ รูปหรือวิดีโอสั้นๆ ทาง WhatsApp หรือ Telegram ช่วยให้เราเข้าใจปัญหา และมักช่วยให้วินิจฉัยทางโทรศัพท์ได้ดีขึ้นก่อนช่างไปถึง</p></div></details>
+<details class="faq-details"><summary>ระหว่างรอช่างประปาควรทำอย่างไร</summary><div class="faq-answer"><p>หากน้ำรั่วออกมา ให้ปิดวาล์วที่ใกล้ที่สุดหรือวาล์วน้ำหลักหากทำได้ และย้ายของออกจากบริเวณที่เปียก</p></div></details>
+<details class="faq-details"><summary>ท่ออุดตันซ้ำๆ แก้ครั้งเดียวจบไหม</summary><div class="faq-answer"><p>ขึ้นอยู่กับสาเหตุ การอุดตันครั้งเดียวแก้ได้เร็ว แต่ถ้าอุดตันซ้ำอาจมีปัญหาลึกกว่านั้นในท่อ ซึ่งประเมินได้ง่ายกว่าเมื่อดูหน้างาน</p></div></details>
+</div>
+
+
 
     <div class="cta-block">
         <h2>📞 โทร</h2>
         <div class="phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
         <div class="hours">⚡ เปิดบริการ 8:00–20:00 น.</div>
-        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#25D366;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
+        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#0b7f43;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
     </div>
-    </div></section>
+    </div></main>
     <div class="related-services">
         <h2>🏠 บริการ</h2>
         <div class="related-grid">
@@ -313,18 +337,18 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>BroService.in.th</h4>
+                    <h4 role="heading" aria-level="3">BroService.in.th</h4>
                     <p>ทีมบริการท้องถิ่นบนเกาะพะงัน</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>บริการ</h4>
+                    <h4 role="heading" aria-level="3">บริการ</h4>
                     <ul class="footer-links">
                         <li><a href="../../th/water-delivery-koh-phangan/">🚰 บริการส่งน้ำดื่ม</a></li>
                         <li><a href="../../th/cleaning-koh-phangan/">🧹 บริการทำความสะอาด</a></li>
@@ -332,10 +356,13 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                         <li><a href="../../th/ac-service-koh-phangan/">❄️ บริการแอร์</a></li>
                         <li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟฟ้า</a></li>
                         <li><a href="../../th/bike-service-koh-phangan/">🛵 บริการมอเตอร์ไซค์</a></li>
+                        <li><a href="../som-mue-thu-koh-phangan/">📱 ซ่อมมือถือและอุปกรณ์ไอที</a></li>
+                        <li><a href="../flower-delivery-koh-phangan/">🌸 บริการส่งดอกไม้</a></li>
+                        <li><a href="../property-rental-koh-phangan/">🏠 เช่าอสังหาริมทรัพย์</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>ติดต่อ</h4>
+                    <h4 role="heading" aria-level="3">ติดต่อ</h4>
                     <ul class="footer-links">
                         <li><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></li>
                         <li><a href="mailto:info@broservice.in.th">✉️ info@broservice.in.th</a></li>
@@ -344,17 +371,20 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>ข้อมูล</h4>
+                    <h4 role="heading" aria-level="3">ข้อมูล</h4>
                     <ul class="footer-links">
                         <li><a href="../../th/">บริการ</a></li>
                         <li><a href="../../th/contacts/">ติดต่อ</a></li>
-                        <li><a href="../../th/sitemap.xml" target="_blank">แผนผังเว็บไซต์</a></li>
+                        <li><a href="../about/">เกี่ยวกับเรา</a></li>
+                        <li><a href="../privacy/">ความเป็นส่วนตัว</a></li>
+                        <li><a href="../../sitemap.xml" target="_blank" rel="noopener">แผนผังเว็บไซต์</a></li>
+                        <li><a href="#" data-consent-settings hidden></a></li>
                         <li><span style="color: #888;">⚡ เปิดบริการ 8:00–20:00 น.</span></li>
                         <li><span style="color: #888;">🌴 เกาะพะงัน ประเทศไทย</span></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Areas</h4>
+                    <h4 role="heading" aria-level="3">Areas</h4>
                     <ul class="footer-links">
                         <li><a href="../../th/thong-sala-koh-phangan/">📍 Thong Sala</a></li>
                         <li><a href="../../th/srithanu-koh-phangan/">📍 Srithanu</a></li>
@@ -371,7 +401,7 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </footer>
     <div class="sticky-cta-bar" id="stickyCta">
     <a href="https://wa.me/+66808705704" class="cta-whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">📞 โทร</a>
+    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">✈️ Telegram</a>
 </div>
 <script>
 (function(){
@@ -399,5 +429,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
   drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 })();
 </script>
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/consent-analytics.js" defer></script>
+<script src="../../assets/js/a11y.js" defer></script>
 </body>
 </html>

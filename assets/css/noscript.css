@@ -1,0 +1,5 @@
+/* Loaded only when JavaScript is unavailable: keep primary navigation reachable. */
+nav, header nav { display: block !important; }
+nav ul.menu, header nav ul { display: flex !important; flex-wrap: wrap; gap: 6px 14px; justify-content: center; padding: 8px 0; list-style: none; }
+.menu-toggle, .mobile-menu-btn, #menuToggle { display: none !important; }
+.mobile-drawer, #mobileDrawer, .drawer-overlay { display: none !important; }

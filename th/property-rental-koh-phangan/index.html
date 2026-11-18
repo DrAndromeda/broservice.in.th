@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>เช่าอสังหาริมทรัพย์บนเกาะพะงัน | BroService</title>
     <meta name="description" content="เช่าวิลล่าและคอนโดระยะยาวทั่วเกาะพะงัน ครอบคลุมท้องศาลา ศรีธนู หาดริ้น ช่อลกลำ บ้านใต้">
-    <link rel="icon" href="../../th/assets/images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    <link rel="preload" href="../../assets/fonts/inter-latin-1ab1ad.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/open-sans-latin-2808bc.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
     <link rel="canonical" href="https://broservice.in.th/th/property-rental-koh-phangan/">
     <meta property="og:title" content="เช่าอสังหาริมทรัพย์บนเกาะพะงัน | BroService">
     <meta property="og:description" content="เช่าวิลล่าและคอนโดระยะยาวทั่วเกาะพะงัน ครอบคลุมท้องศาลา ศรีธนู หาดริ้น ช่อลกลำ บ้านใต้">
@@ -17,150 +18,81 @@
     <meta property="og:site_name" content="BroService.in.th">
     <meta property="og:locale" content="th_TH">
     <meta property="og:image" content="https://broservice.in.th/assets/images/property-rental.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="533">
+    <meta property="og:image:alt" content="เช่าอสังหาริมทรัพย์บนเกาะพะงัน">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="เช่าอสังหาริมทรัพย์บนเกาะพะงัน | BroService">
     <meta name="twitter:description" content="เช่าวิลล่าและคอนโดระยะยาวทั่วเกาะพะงัน ครอบคลุมท้องศาลา ศรีธนู หาดริ้น ช่อลกลำ บ้านใต้">
     <meta name="twitter:image" content="https://broservice.in.th/assets/images/property-rental.jpg">
+    <meta name="twitter:image:alt" content="เช่าอสังหาริมทรัพย์บนเกาะพะงัน">
     <link rel="alternate" hreflang="en" href="https://broservice.in.th/property-rental-koh-phangan/">
-    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/property-rental-koh-phangan/">
     <link rel="alternate" hreflang="ru" href="https://broservice.in.th/ru/property-rental-koh-phangan/">
     <link rel="alternate" hreflang="th" href="https://broservice.in.th/th/property-rental-koh-phangan/">
     <link rel="alternate" hreflang="he" href="https://broservice.in.th/he/property-rental-koh-phangan/">
-    <style>
-:root {
-    --primary: #e88800;
-    --primary-dark: #c47000;
-    --dark: #1a1414;
-    --dark2: #2b2424;
-    --darker: #1f1919;
-    --bg: #edeef0;
-    --text-light: #8f8b8c;
-    --white: #fff;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #000; background: var(--dark); line-height: 1.65; font-size: 16px; }
-.container { max-width: 960px; margin: 0 auto; padding: 0 15px; }
-a { text-decoration: none; color: var(--primary); }
-a:hover { text-decoration: underline; }
-header { background: linear-gradient(180deg, var(--dark2), var(--darker)); padding: 4px 0 0; position: sticky; top: 0; z-index: 100; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 0 2px; }
-.logo { font-family: Inter, sans-serif; font-size: 22px; font-weight: 700; color: var(--primary); text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
-.logo span { color: #d3d3d3; font-weight: 300; }
-.header-right { display: flex; align-items: center; gap: 8px; }
-.header-phone { font-size: 16px; font-weight: bold; }
-.header-phone a { color: #e88800; font-weight: bold; }
-.social-icons { display: flex; gap: 3px; }
-.social-icons a { display: inline-block; transition: opacity 0.2s; }
-.social-icons a:hover { opacity: 0.7; }
-.social-icons svg { width: 22px; height: 22px; border-radius: 50%; display: block; }
-nav { background: linear-gradient(180deg, #e57c00, #c47000); border-radius: 6px 6px 0 0; margin-top: 4px; }
-ul.menu { display: flex; justify-content: center; flex-wrap: nowrap; list-style: none; padding: 4px 4px; }
-ul.menu li { display: inline-block; line-height: 16px; margin: 2px 1px; padding: 4px 6px; border-radius: 5px; transition: background 0.2s; }
-ul.menu li:hover { background: rgba(0,0,0,0.08); }
-ul.menu li a { font-size: 13px; line-height: 16px; color: #1f1919; font-weight: 600; white-space: nowrap; }
-ul.menu li a:hover { color: #fff; }
-ul.menu li.active { background: rgba(0,0,0,0.1); }
-ul.menu li.active a { color: #fff; }
-.breadcrumbs { background: var(--bg); padding: 6px 0; font-size: 13px; color: #888; }
-.breadcrumbs a { color: var(--primary); }
-#content { background: var(--bg); padding: 20px 0 25px; text-align: center; }
-#content p, #content li, #content .justifyfull { text-align: left; max-width: 700px; margin: 10px auto; }
-#content ul { display: inline-block; text-align: left; max-width: 600px; padding-left: 35px; }
-#content h1 { font-family: Inter, sans-serif; font-size: 28px; font-weight: 700; color: #1f1919; margin-bottom: 14px; }
-#content h2 { font-family: Inter, sans-serif; font-size: 22px; font-weight: 600; color: #1f1919; margin: 18px 0 8px; border-left: 4px solid var(--primary); padding-left: 12px; text-align: center; }
-#content h3 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; color: var(--primary); margin: 16px 0 6px; text-align: center; }
-#content p { margin: 10px 0; color: #444; line-height: 1.65; }
-#content .justifyfull { text-align: justify; }
-#content ul { margin: 10px 0 16px; padding-left: 20px; list-style: none; }
-#content ul li { margin: 5px 0; padding-left: 20px; position: relative; }
-#content ul li::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
-#content table { margin: 15px auto !important; }
-#content .faq-item { text-align: left; max-width: 700px; margin: 0 auto; }
-.float-img { float: right; margin: 0 0 15px 20px; border-radius: 8px; max-width: 40%; }
-img { max-width: 100%; height: auto; border-radius: 7px; }
-#content img { max-width: 100%; height: auto; max-height: 400px; object-fit: contain; }
-.cta-block { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); padding: 24px 20px; border-radius: 10px; text-align: center; margin: 20px 0; }
-.cta-block h2 { color: var(--white) !important; font-size: 24px !important; border: none !important; padding: 0 !important; margin-bottom: 10px !important; }
-.cta-block .phone { font-size: 28px; font-weight: 700; margin: 10px 0; }
-.cta-block .phone a { color: var(--white); }
-.cta-block .hours { font-size: 14px; opacity: 0.9; }
-.usp-bar { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; background:#fff; padding:12px 15px; margin:0; border-bottom:3px solid var(--primary); font-size:13px; color:#333; font-weight:600; }
-.usp-bar span { display:flex; align-items:center; gap:6px; white-space:nowrap; }
-.related-services { max-width:960px; margin:0 auto; padding:25px 15px; background:var(--bg); }
-.related-services h2 { font-family: Inter, sans-serif; font-size:20px; font-weight:600; color:#1f1919; text-align:center; margin-bottom:14px; }
-.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.related-grid a { display:block; background:#fff; border-radius:8px; padding:16px 10px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,0.08); color:#1f1919; font-weight:600; font-size:14px; transition:transform .15s; }
-.related-grid a:hover { transform:translateY(-3px); text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.12); }
-.related-grid .emoji { display:block; font-size:26px; margin-bottom:6px; }
-footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
-.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-bottom: 20px; }
-.footer-col h4 { font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
-.footer-col p { font-size: 13px; line-height: 1.5; color: #aaa; }
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 6px; }
-.footer-links a { font-size: 13px; color: #aaa; }
-.footer-links a:hover { color: var(--primary); }
-.footer-social { display: flex; gap: 6px; margin-top: 10px; }
-.footer-social a:hover { opacity: 0.7; }
-.footer-social svg { width: 22px; height: 22px; border-radius: 50%; }
-.footer-bottom { border-top: 1px solid #333; padding-top: 15px; text-align: center; font-size: 13px; color: #888; }
-.footer-bottom a { color: var(--primary); }
-.menu-toggle { display:none; }
-.mobile-drawer, .drawer-overlay { display:none; }
-.sticky-cta-bar { display:none; }
-@media only screen and (max-width: 768px) {
-    nav { display:none; }
-    .menu-toggle { display:flex; align-items:center; justify-content:center; background:none; border:none; color:#fff; font-size:26px; cursor:pointer; padding:4px 8px; }
-    .drawer-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:299; }
-    .drawer-overlay.open { display:block; }
-    .mobile-drawer { display:block; position:fixed; top:0; right:-82%; width:78%; max-width:320px; height:100%; background:var(--darker); z-index:300; transition:right .25s ease; box-shadow:-4px 0 18px rgba(0,0,0,0.35); overflow-y:auto; }
-    .mobile-drawer.open { right:0; }
-    .drawer-close { text-align:right; padding:14px 18px 0; }
-    .drawer-close button { background:none; border:none; color:#fff; font-size:30px; cursor:pointer; line-height:1; }
-    .mobile-drawer ul { list-style:none; padding:6px 22px 24px; margin:0; }
-    .mobile-drawer ul li { padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.09); }
-    .mobile-drawer ul li a { color:#fff; font-size:16px; font-weight:600; display:block; }
-    .mobile-drawer ul li.active a { color:var(--primary); }
-    .mobile-drawer .drawer-lang { padding:16px 22px; display:flex; gap:14px; font-size:14px; }
-    .mobile-drawer .drawer-lang a { color:#aaa; font-weight:600; }
-    .mobile-drawer .drawer-lang a.active-lang { color:var(--primary); }
-    .header-right { flex-direction: column; gap: 5px; }
-    #content h1 { font-size: 22px; }
-    #content h2 { font-size: 18px; }
-    .float-img { float: none; margin: 0 auto 15px; max-width: 100%; }
-    .footer-grid { grid-template-columns: 1fr; padding: 0 15px; gap: 10px; }
-    .header-inner { flex-direction: column; text-align: center; }
-    .usp-bar { font-size:11px; gap:6px 12px; padding:8px 10px; }
-    .related-grid { grid-template-columns:1fr 1fr; }
-    .sticky-cta-bar { display:flex; position:fixed; bottom:0; left:0; right:0; z-index:200; box-shadow:0 -2px 12px rgba(0,0,0,0.18); }
-    .sticky-cta-bar a { flex:1; text-align:center; padding:13px 0; font-size:14px; font-weight:700; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px; }
-    .sticky-cta-bar .cta-whatsapp { background:#25D366; color:#fff; }
-    .sticky-cta-bar .cta-telegram { background:#0088cc; color:#fff; }
-    body { padding-bottom: 52px; }
-}
-</style>
+    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/property-rental-koh-phangan/">
+    <link rel="stylesheet" href="../../assets/css/tpl-1449763b.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "BroService.in.th",
+  "@id": "https://broservice.in.th/#localbusiness",
+  "name": "BroService",
+  "url": "https://broservice.in.th/",
   "telephone": "+66808705704",
-  "url": "https://broservice.in.th/th/property-rental-koh-phangan/",
+  "email": "info@broservice.in.th",
   "areaServed": [
-    "Thong Sala",
-    "Srithanu",
-    "Haad Rin",
-    "Chaloklum",
-    "Baan Tai",
-    "Koh Phangan"
+    {
+      "@type": "Place",
+      "name": "Koh Phangan"
+    },
+    {
+      "@type": "Place",
+      "name": "Thong Sala"
+    },
+    {
+      "@type": "Place",
+      "name": "Srithanu"
+    },
+    {
+      "@type": "Place",
+      "name": "Haad Rin"
+    },
+    {
+      "@type": "Place",
+      "name": "Baan Tai"
+    },
+    {
+      "@type": "Place",
+      "name": "Chaloklum"
+    }
   ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Koh Phangan",
     "addressRegion": "Surat Thani",
     "addressCountry": "TH"
-  }
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+        "https://schema.org/Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://facebook.com/broservice.kohphangan",
+    "https://instagram.com/broservice_kohphangan"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -171,8 +103,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Services",
-      "item": "https://broservice.in.th/"
+      "name": "บริการ",
+      "item": "https://broservice.in.th/th/"
     },
     {
       "@type": "ListItem",
@@ -182,21 +114,55 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     }
   ]
 }
+</script><link rel="stylesheet" href="../../assets/css/common.css">
+<noscript><link rel="stylesheet" href="../../assets/css/noscript.css"></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ควรเริ่มหาที่เช่าล่วงหน้านานแค่ไหน",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นอยู่กับฤดูกาลและความต้องการของคุณ หลายคนเริ่มหาล่วงหน้าไม่กี่สัปดาห์ก่อนมาถึง และบางคนชอบมาถึงก่อนแล้วค่อยไปดูที่พักจริง ส่งวันที่ต้องการย้ายเข้ามาให้เรา แล้วเราจะคุยกันถึงตัวเลือกที่เป็นไปได้"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "เช่าได้ไหมถ้ามีสัตว์เลี้ยงหรือมอเตอร์ไซค์",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "กฎของเจ้าของแต่ละรายไม่เหมือนกัน บอกเรื่องสัตว์เลี้ยงและที่จอดรถตั้งแต่ต้น เพื่อตัดตัวเลือกที่ไม่เหมาะออกก่อนไปดูที่พัก"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ควรจ่ายเงินมัดจำก่อนดูที่พักไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "โดยทั่วไปปลอดภัยกว่าที่จะไปดูที่พักก่อน อ่านสัญญาที่เป็นลายลักษณ์อักษร และจ่ายเงินเมื่อได้รับใบเสร็จที่ระบุว่าเป็นค่าอะไร"
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body>
+<a class="skip-link" href="#content">ข้ามไปยังเนื้อหา</a>
     <header>
         <div class="container">
             <div class="header-inner">
-                <div class="logo" onclick="window.location='../../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
+                <div class="logo" onclick="window.location='../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
                 <div class="header-right">
                     <div class="header-phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
                     <div class="social-icons">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
             </div>
@@ -205,11 +171,11 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
             <div class="mobile-drawer" id="mobileDrawer">
                 <div class="drawer-close"><button id="drawerClose" aria-label="Close">×</button></div>
                 <ul><li><a href="../../th/">🏠 บริการ</a></li><li><a href="../../th/water-delivery-koh-phangan/">🚰 น้ำดื่ม</a></li><li><a href="../../th/bike-service-koh-phangan/">🛵 มอเตอร์ไซค์</a></li><li><a href="../../th/cleaning-koh-phangan/">🧹 ทำความสะอาด</a></li><li><a href="../../th/ac-service-koh-phangan/">❄️ แอร์</a></li><li><a href="../../th/plumber-koh-phangan/">🔧 ช่างประปา</a></li><li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟ</a></li><li><a href="../../th/handyman-koh-phangan/">🔨 ช่างซ่อมทั่วไป</a></li><li><a href="../../th/contacts/">✉️ ติดต่อ</a></li></ul>
-                <div class="drawer-lang"><a href="../../th/property-rental-koh-phangan/">EN</a><a href="../../../ru/property-rental-koh-phangan/">RU</a><a href="../../th/property-rental-koh-phangan/" class="active-lang">TH</a><a href="../../../he/property-rental-koh-phangan/">HE</a></div>
+                <div class="drawer-lang"><a href="../../property-rental-koh-phangan/">EN</a><a href="../../ru/property-rental-koh-phangan/">RU</a><a href="./" class="active-lang">TH</a><a href="../../he/property-rental-koh-phangan/">HE</a></div>
             </div>
-            <nav><ul class="menu"><li><a href="../../">🏠 บริการ</a></li><li><a href="../../th/water-delivery-koh-phangan/">🚰 น้ำดื่ม</a></li><li><a href="../../th/bike-service-koh-phangan/">🛵 มอเตอร์ไซค์</a></li><li><a href="../../th/cleaning-koh-phangan/">🧹 ทำความสะอาด</a></li><li><a href="../../th/ac-service-koh-phangan/">❄️ แอร์</a></li><li><a href="../../th/plumber-koh-phangan/">🔧 ช่างประปา</a></li><li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟ</a></li><li><a href="../../th/handyman-koh-phangan/">🔨 ช่างซ่อมทั่วไป</a></li><li><a href="../../th/contacts/">✉️ ติดต่อ</a></li></ul></nav>
+            <nav><ul class="menu"><li><a href="../">🏠 บริการ</a></li><li><a href="../../th/water-delivery-koh-phangan/">🚰 น้ำดื่ม</a></li><li><a href="../../th/bike-service-koh-phangan/">🛵 มอเตอร์ไซค์</a></li><li><a href="../../th/cleaning-koh-phangan/">🧹 ทำความสะอาด</a></li><li><a href="../../th/ac-service-koh-phangan/">❄️ แอร์</a></li><li><a href="../../th/plumber-koh-phangan/">🔧 ช่างประปา</a></li><li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟ</a></li><li><a href="../../th/handyman-koh-phangan/">🔨 ช่างซ่อมทั่วไป</a></li><li><a href="../../th/contacts/">✉️ ติดต่อ</a></li></ul></nav>
         </div>
-    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../../property-rental-koh-phangan/">EN</a> <a href="../../../ru/property-rental-koh-phangan/">RU</a> <a href="../../../th/property-rental-koh-phangan/">TH</a> <a href="../../../he/property-rental-koh-phangan/">HE</a></div>
+    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../property-rental-koh-phangan/">EN</a> <a href="../../ru/property-rental-koh-phangan/">RU</a> <a href="./">TH</a> <a href="../../he/property-rental-koh-phangan/">HE</a></div>
     </header>
     <div class="usp-bar">
         <span>⚡ บริการวันเดียวกัน</span>
@@ -222,12 +188,12 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </div>
     <div class="service-hero">
         <div class="container">
-            <img loading="lazy" width="800" height="533" src="../../assets/images/property-rental.jpg" alt="เช่าอสังหาริมทรัพย์บนเกาะพะงัน">
+            <picture><source type="image/webp" srcset="../../assets/images/property-rental-400.webp 400w, ../../assets/images/property-rental.webp 800w" sizes="(max-width: 800px) 100vw, 800px"><img fetchpriority="high" decoding="async" width="800" height="533" src="../../assets/images/property-rental.jpg" alt="เช่าอสังหาริมทรัพย์บนเกาะพะงัน"></picture>
         </div>
     </div>
-    <section id="content"><div class="container">
-    <h1>📱 ซ่อมมือถือ &amp; อุปกรณ์ไอทีบนเกาะพะงัน</h1>
-    <div style="background:#f8f6f0;border-left:4px solid #e88800;padding:16px;margin:20px 0;border-radius:4px;"><strong>กำลังมองหาวิลล่าหรือคอนโดระยะยาวอยู่หรือเปล่า เราช่วยจับคู่ผู้เช่ากับเจ้าของบ้านทั่วเกาะ ท้องศาลา ศรีธนู หาดริ้น ช่อลกลำ และบ้านใต้</strong></div>
+    <main id="content"><div class="container">
+    <h1>🏠 เช่าอสังหาริมทรัพย์บนเกาะพะงัน</h1>
+    <div style="background:#f8f6f0;border-left:4px solid #9c5400;padding:16px;margin:20px 0;border-radius:4px;"><strong>กำลังมองหาวิลล่าหรือคอนโดระยะยาวอยู่หรือเปล่า เราช่วยจับคู่ผู้เช่ากับเจ้าของบ้านทั่วเกาะ ท้องศาลา ศรีธนู หาดริ้น ช่อลกลำ และบ้านใต้</strong></div>
     
     
     <p class="justifyfull">เมื่อคุณย้ายเข้าเรียบร้อยแล้ว BroService ยังดูแลทุกอย่างที่บ้านใหม่ของคุณต้องการ ไม่ว่าจะเป็นส่งน้ำดื่ม ทำความสะอาด บริการและซ่อมแอร์ ทั้งหมดจากทีมเดียวกัน</p>
@@ -235,30 +201,152 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     
     
 
+
+<p class="justifyfull">การหาบ้านเช่าที่ใช่บนเกาะพะงันอาจเป็นเรื่องยากเพราะมีตัวเลือกมากมาย ไม่ว่าคุณจะมองหาสตูดิโอราคาประหยัดใกล้ท้องศาลา หรือวิลล่าหรูติดชายหาดพร้อมสระส่วนตัว เราช่วยคุณหาที่พักที่เหมาะได้ รายการทั้งหมดของเราผ่านการตรวจสอบแล้วและราคายุติธรรม</p>
+<p class="justifyfull">เราเชี่ยวชาญด้านการเช่าระยะยาวสำหรับชาวต่างชาติและดิจิทัลโนแมดที่ย้ายมาอยู่เกาะพะงัน ทีมงานของเรารู้จักทุกชายหาดและทุกซอยบนเกาะ เราช่วยเรื่องการนัดดูที่พัก การเจรจาสัญญา และเอกสาร ไม่มีค่านายหน้า เราเชื่อมคุณกับเจ้าของที่พักโดยตรง</p>
+
+<h2>🏠 บริการเช่าอสังหาริมทรัพย์</h2>
+<ul>
+<li><strong>เช่าระยะยาว</strong> — วิลล่าและคอนโดสำหรับสัญญา 6 เดือนขึ้นไป</li>
+<li><strong>เช่าระยะสั้น</strong> — ที่พักพร้อมเฟอร์นิเจอร์สำหรับ 1-3 เดือน</li>
+<li><strong>ที่พักติดชายหาด</strong> — วิลล่าและคอนโดวิวทะเล</li>
+<li><strong>ตั้งแต่ประหยัดจนถึงหรู</strong> — ตั้งแต่สตูดิโอราคาประหยัดไปจนถึงวิลล่าหรู</li>
+<li><strong>บริการพาไปดูที่พัก</strong> — เราไปดูที่พักพร้อมคุณ</li>
+<li><strong>ช่วยเรื่องสัญญา</strong> — ช่วยเรื่องสัญญาเช่าและเงินมัดจำ</li>
+</ul>
+
+<h2>📋 หาบ้านเช่าได้ง่ายๆ</h2>
+<ol style="max-width:600px;margin:10px auto 16px;text-align:left;padding-left:20px;">
+<li style="margin:5px 0;"><strong>แจ้งเรา</strong> — งบประมาณ พื้นที่ที่ชอบ และความต้องการของคุณ</li>
+<li style="margin:5px 0;"><strong>ค้นหา</strong> — เราหาที่พักที่ตรงกับความต้องการจากรายการที่ตรวจสอบแล้ว</li>
+<li style="margin:5px 0;"><strong>ดูที่พัก</strong> — เรานัดดูและไปดูพร้อมคุณ</li>
+<li style="margin:5px 0;"><strong>เลือก</strong> — เลือกที่พักที่คุณถูกใจ</li>
+<li style="margin:5px 0;"><strong>ย้ายเข้า</strong> — เราช่วยเรื่องเอกสารและกุญแจ</li>
+</ol>
+
+<h2>💰 ราคาเช่า</h2>
+<div style="overflow-x:auto;">
+<table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
+<thead>
+<tr style="background:var(--primary);color:#fff;">
+<th style="padding:10px 12px;text-align:left;">ประเภท</th>
+<th style="padding:10px 12px;text-align:left;">ราคา</th>
+<th style="padding:10px 12px;text-align:left;">รายละเอียด</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">สตูดิโอ</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿8,000-12,000/เดือน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">เฟอร์นิเจอร์ครบ</td></tr>
+<tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">วิลล่า 1 ห้องนอน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿12,000-18,000/เดือน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">วิวสวน</td></tr>
+<tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">วิลล่า 2 ห้องนอน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿18,000-30,000/เดือน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ใช้สระว่ายน้ำได้</td></tr>
+<tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">ติดชายหาด</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿25,000-50,000/เดือน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">วิวทะเล</td></tr>
+<tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">วิลล่าหรู</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);">฿50,000-100,000/เดือน</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">สระว่ายน้ำส่วนตัว</td></tr>
+</tbody>
+</table>
+</div>
+<p class="price-note" style="font-size:13px;color:#595959;text-align:center;margin:4px 0 14px;">ค่าเช่ารายเดือนโดยประมาณเป็นเงินบาท (฿) ค่าเช่าจริงขึ้นอยู่กับทรัพย์สิน ฤดูกาล และเงื่อนไขสัญญา อัปเดตล่าสุด 17 พฤศจิกายน 2569</p>
+
+<h2>✅ ทำไมต้องเลือก BroService สำหรับการเช่า</h2>
+<ul>
+<li><strong>รายการที่ตรวจสอบแล้ว</strong> — ทุกที่พักได้รับการตรวจสอบด้วยตัวเอง</li>
+<li><strong>ไม่มีค่านายหน้า</strong> — เราช่วยหาที่เช่าตรงกับเจ้าของ</li>
+<li><strong>รู้จักพื้นที่</strong> — เรารู้จักทุกชายหาดและทุกซอย</li>
+<li><strong>ช่วยเรื่องสัญญา</strong> — ช่วยเรื่องสัญญาเช่าแบบไทย</li>
+<li><strong>หลายภาษา</strong> — เจ้าหน้าที่พูดภาษาอังกฤษ รัสเซีย และไทย</li>
+</ul>
+
+<h3>📍 พื้นที่ที่เราให้บริการ</h3>
+<p class="justifyfull">เราให้บริการ<strong>ที่พักให้เช่า</strong>ทั่วเกาะพะงัน ได้แก่ <strong>ท้องศาลา</strong> (เหมาะกับร้านค้าและร้านอาหาร) <strong>หาดริ้น</strong> (ย่านปาร์ตี้) <strong>บ้านใต้</strong> (ที่นิยมของชาวต่างชาติ) <strong>ศรีธนู</strong> (โยคะและรีทรีต) <strong>ช่อลกลำ</strong> (หมู่บ้านชาวประมง) และพื้นที่ใกล้เคียง</p>
+
+
+    <h2>🧰 บริการนี้โดยทั่วไปครอบคลุมอะไรบ้าง</h2>
+    <p class="justifyfull">การหาที่เช่ากับเรามักเริ่มจากการพูดคุยว่าคุณต้องการอะไร จากนั้นจึงคัดตัวเลือกที่เหมาะสม และหากเป็นไปได้ก็นัดดูห้องหรือบ้านจริง ขึ้นอยู่กับสถานการณ์ของคุณ ความช่วยเหลืออาจรวมถึง</p>
+    <ul>
+        <li>คัดตัวเลือกให้ตรงกับงบประมาณ พื้นที่ และช่วงเวลาของคุณ</li>
+        <li>นัดดูที่พักและไปดูพร้อมคุณ</li>
+        <li>ช่วยทำความเข้าใจสัญญาเช่าและเงินมัดจำ</li>
+        <li>ช่วยดูแลตอนย้ายเข้าและรับกุญแจ</li>
+        <li>บริการหลังย้ายเข้า เช่น ส่งน้ำดื่ม ทำความสะอาด และบริการแอร์</li>
+    </ul>
+
+    <h2>🧳 เหมาะกับใคร และสถานการณ์ที่พบบ่อยบนเกาะพะงัน</h2>
+    <p class="justifyfull">โดยมากลูกค้าติดต่อเราในสถานการณ์เหล่านี้</p>
+    <ul>
+        <li><strong>คนที่เพิ่งมาถึงเกาะ</strong> และยังไม่รู้ว่าย่านไหนเหมาะกับตัวเอง</li>
+        <li><strong>คนทำงานออนไลน์และดิจิทัลโนแมด</strong> ที่ต้องการที่พักพร้อมอินเทอร์เน็ตที่เสถียรสักไม่กี่เดือน</li>
+        <li><strong>ผู้พักระยะยาว</strong> ที่อยากย้ายออกจากโรงแรมหรือเกสต์เฮาส์</li>
+        <li><strong>ครอบครัวและคู่รัก</strong> ที่ต้องการพื้นที่มากขึ้น สวน หรือที่จอดรถ</li>
+        <li><strong>คนที่อยู่บนเกาะอยู่แล้ว</strong> และกำลังย้ายบ้าน อยากให้มีคนช่วยดูอีกคน</li>
+    </ul>
+
+    <h2>📝 เตรียมตัวอย่างไร บอกอะไรเราได้บ้าง</h2>
+    <p class="justifyfull">ยิ่งบอกรายละเอียดชัดเจน เรายิ่งแนะนำตัวเลือกที่เหมาะได้ง่ายขึ้น เมื่อแชทหาเราทาง WhatsApp หรือ Telegram ควรแจ้งข้อมูลต่อไปนี้</p>
+    <ul>
+        <li>ช่วงงบประมาณต่อเดือน</li>
+        <li>พื้นที่ที่ต้องการ หรือสิ่งที่สำคัญที่สุด (ชายหาด ร้านค้า ความเงียบสงบ โยคะ ไนต์ไลฟ์)</li>
+        <li>วันที่ย้ายเข้าและระยะเวลาที่วางแผนจะอยู่</li>
+        <li>จำนวนผู้อยู่อาศัย รวมถึงเด็ก</li>
+        <li>สัตว์เลี้ยง (ถ้ามี)</li>
+        <li>ใช้มอเตอร์ไซค์หรือรถยนต์ และต้องการที่จอดรถหรือไม่</li>
+        <li>ความต้องการด้านอินเทอร์เน็ต เช่น ทำงานออนไลน์</li>
+        <li>สิ่งที่ต้องมี เช่น สระว่ายน้ำ เครื่องปรับอากาศ ห้องครัว หรือมุมทำงาน</li>
+    </ul>
+
+    <h2>💰 อะไรที่มีผลต่อค่าเช่าสุดท้าย</h2>
+    <p class="justifyfull">ตารางด้านบนเป็นช่วงราคาโดยประมาณ ราคาจริงจะอยู่ตรงไหนในช่วงนั้น หรือเกินช่วงไปบ้าง มักขึ้นอยู่กับ</p>
+    <ul>
+        <li>ทำเลและระยะห่างจากชายหาด ร้านค้า และถนนใหญ่</li>
+        <li>ประเภท ขนาด และจำนวนห้องนอนของที่พัก</li>
+        <li>วิวทะเล สระว่ายน้ำ และสวน</li>
+        <li>เฟอร์นิเจอร์และสภาพอาคาร</li>
+        <li>ระยะเวลาสัญญา เพราะการเช่านานขึ้นมักต่อรองได้ยืดหยุ่นกว่า</li>
+        <li>ฤดูกาลและความต้องการในช่วงที่คุณหา</li>
+        <li>ค่าไฟ ค่าน้ำ และอินเทอร์เน็ตรวมอยู่ในค่าเช่าหรือคิดแยกต่างหาก</li>
+    </ul>
+
+    <h2>🔍 สิ่งที่ควรตรวจสอบก่อนเซ็นสัญญาเช่าทุกครั้ง</h2>
+    <p class="justifyfull">นี่เป็นคำแนะนำทั่วไปสำหรับการเช่าที่พักทุกแห่ง ไม่ใช่คำปรึกษาทางกฎหมาย และใช้ได้ไม่ว่าจะมีใครช่วยหาที่พักให้คุณ</p>
+    <ul>
+        <li>ไปดูที่พักด้วยตัวเองในช่วงกลางวัน และสังเกตละแวกบ้านในเวลาต่าง ๆ ของวัน</li>
+        <li>ขอสัญญาเป็นลายลักษณ์อักษรและอ่านให้ครบ ทั้งระยะเวลา ค่าเช่า และระยะเวลาแจ้งล่วงหน้าเมื่อจะย้ายออก</li>
+        <li>ทำรายการทรัพย์สินและถ่ายรูปพร้อมวันที่ ทั้งสภาพห้อง เฟอร์นิเจอร์ และเครื่องใช้ไฟฟ้าตอนย้ายเข้า</li>
+        <li>ทำความเข้าใจเรื่องเงินมัดจำ ทั้งจำนวน ครอบคลุมอะไรบ้าง และคืนเมื่อไรอย่างไร</li>
+        <li>สอบถามวิธีคิดค่าไฟและค่าน้ำ และใครรับผิดชอบค่าซ่อม</li>
+        <li>ลองเปิดน้ำดูแรงดัน น้ำอุ่น เครื่องปรับอากาศ และสัญญาณอินเทอร์เน็ต</li>
+        <li>ดูสภาพถนนเข้าที่พัก โดยเฉพาะหลังฝนตกหนัก</li>
+        <li>เก็บใบเสร็จทุกครั้งที่จ่ายเงิน</li>
+    </ul>
+
+    <h2>❓ คำถามที่พบบ่อย</h2>
+<div class="faq-section">
+<details class="faq-details"><summary>ควรเริ่มหาที่เช่าล่วงหน้านานแค่ไหน</summary><div class="faq-answer"><p>ขึ้นอยู่กับฤดูกาลและความต้องการของคุณ หลายคนเริ่มหาล่วงหน้าไม่กี่สัปดาห์ก่อนมาถึง และบางคนชอบมาถึงก่อนแล้วค่อยไปดูที่พักจริง ส่งวันที่ต้องการย้ายเข้ามาให้เรา แล้วเราจะคุยกันถึงตัวเลือกที่เป็นไปได้</p></div></details>
+<details class="faq-details"><summary>เช่าได้ไหมถ้ามีสัตว์เลี้ยงหรือมอเตอร์ไซค์</summary><div class="faq-answer"><p>กฎของเจ้าของแต่ละรายไม่เหมือนกัน บอกเรื่องสัตว์เลี้ยงและที่จอดรถตั้งแต่ต้น เพื่อตัดตัวเลือกที่ไม่เหมาะออกก่อนไปดูที่พัก</p></div></details>
+<details class="faq-details"><summary>ควรจ่ายเงินมัดจำก่อนดูที่พักไหม</summary><div class="faq-answer"><p>โดยทั่วไปปลอดภัยกว่าที่จะไปดูที่พักก่อน อ่านสัญญาที่เป็นลายลักษณ์อักษร และจ่ายเงินเมื่อได้รับใบเสร็จที่ระบุว่าเป็นค่าอะไร</p></div></details>
+</div>
+
     <div class="cta-block">
         <h2>📞 โทร</h2>
         <div class="phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
-        <div class="hours">⚡ เปิดบริการ 8:00–20:00 น.</div>
-        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#25D366;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
+        <div class="hours">⚡ เปิดบริการ 8:00–20:00 น. ทุกวัน</div>
+        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#0b7f43;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
     </div>
-    </div></section>
+    </div></main>
     
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>BroService.in.th</h4>
+                    <h4 role="heading" aria-level="3">BroService.in.th</h4>
                     <p>ทีมบริการท้องถิ่นบนเกาะพะงัน</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>บริการ</h4>
+                    <h4 role="heading" aria-level="3">บริการ</h4>
                     <ul class="footer-links">
                         <li><a href="../../th/water-delivery-koh-phangan/">🚰 บริการส่งน้ำดื่ม</a></li>
                         <li><a href="../../th/cleaning-koh-phangan/">🧹 บริการทำความสะอาด</a></li>
@@ -266,10 +354,13 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                         <li><a href="../../th/ac-service-koh-phangan/">❄️ บริการแอร์</a></li>
                         <li><a href="../../th/electrician-koh-phangan/">⚡ ช่างไฟฟ้า</a></li>
                         <li><a href="../../th/bike-service-koh-phangan/">🛵 บริการมอเตอร์ไซค์</a></li>
+                        <li><a href="../som-mue-thu-koh-phangan/">📱 ซ่อมมือถือและอุปกรณ์ไอที</a></li>
+                        <li><a href="../flower-delivery-koh-phangan/">🌸 บริการส่งดอกไม้</a></li>
+                        <li><a href="./">🏠 เช่าอสังหาริมทรัพย์</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>ติดต่อ</h4>
+                    <h4 role="heading" aria-level="3">ติดต่อ</h4>
                     <ul class="footer-links">
                         <li><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></li>
                         <li><a href="mailto:info@broservice.in.th">✉️ info@broservice.in.th</a></li>
@@ -278,17 +369,20 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>ข้อมูล</h4>
+                    <h4 role="heading" aria-level="3">ข้อมูล</h4>
                     <ul class="footer-links">
                         <li><a href="../../th/">บริการ</a></li>
                         <li><a href="../../th/contacts/">ติดต่อ</a></li>
-                        <li><a href="../../th/sitemap.xml" target="_blank">แผนผังเว็บไซต์</a></li>
-                        <li><span style="color: #888;">⚡ เปิดบริการ 8:00–20:00 น.</span></li>
+                        <li><a href="../about/">เกี่ยวกับเรา</a></li>
+                        <li><a href="../privacy/">ความเป็นส่วนตัว</a></li>
+                        <li><a href="../../sitemap.xml" target="_blank" rel="noopener">แผนผังเว็บไซต์</a></li>
+                        <li><a href="#" data-consent-settings hidden></a></li>
+                        <li><span style="color: #888;">⚡ เปิดบริการ 8:00–20:00 น. ทุกวัน</span></li>
                         <li><span style="color: #888;">🌴 เกาะพะงัน ประเทศไทย</span></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Areas</h4>
+                    <h4 role="heading" aria-level="3">Areas</h4>
                     <ul class="footer-links">
                         <li><a href="../../th/thong-sala-koh-phangan/">📍 Thong Sala</a></li>
                         <li><a href="../../th/srithanu-koh-phangan/">📍 Srithanu</a></li>
@@ -305,7 +399,7 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </footer>
     <div class="sticky-cta-bar" id="stickyCta">
     <a href="https://wa.me/+66808705704" class="cta-whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">📞 โทร</a>
+    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">✈️ Telegram</a>
 </div>
 <script>
 (function(){
@@ -333,5 +427,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
   drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 })();
 </script>
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/consent-analytics.js" defer></script>
+<script src="../../assets/js/a11y.js" defer></script>
 </body>
 </html>

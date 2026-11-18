@@ -1,0 +1,128 @@
+/* BroService shared styles: design tokens + accessibility/robustness layer.
+   Loaded after each page's own <style>, so it only adds what pages lack. */
+
+:root {
+  /* Design tokens (documented single source; page styles keep their own --primary etc.) */
+  --bs-color-primary: #e88800;        /* brand orange: backgrounds/accents on dark only */
+  --bs-color-accent-text: #9c5400;    /* accessible orange for text/buttons on light (>=5.7:1 on white) */
+  --bs-color-primary-dark: #c47000;
+  --bs-color-ink: #1f1919;
+  --bs-color-ink-soft: #444;
+  --bs-color-surface: #ffffff;
+  --bs-color-focus: #1a5fd0;
+  --bs-font-body: 'Open Sans', Arial, sans-serif;
+  --bs-font-heading: 'Inter', 'Open Sans', Arial, sans-serif;
+  --bs-space-1: 4px;
+  --bs-space-2: 8px;
+  --bs-space-3: 12px;
+  --bs-space-4: 16px;
+  --bs-space-5: 24px;
+  --bs-space-6: 32px;
+  --bs-radius: 8px;
+  --bs-radius-sm: 6px;
+  --bs-content-width: 700px;
+  --bs-tap-target: 44px;
+  --bs-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+  --bs-bp-sm: 640px;
+  --bs-bp-md: 768px;
+  --bs-bp-lg: 1024px;
+}
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { overflow-wrap: break-word; }
+img, video, svg { max-width: 100%; }
+picture { display: contents; }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, summary:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--bs-color-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Minimum 24x24 px targets on every viewport (WCAG 2.2 SC 2.5.8); touch layouts below raise this to 44 px */
+nav a, .menu a { display: inline-block; padding-block: 5px; min-height: 24px; box-sizing: border-box; }
+.header-phone a, .footer-links a, .breadcrumbs a, .breadcrumb a { display: inline-block; padding-block: 3px; min-height: 24px; box-sizing: border-box; }
+.langs a, .lang-switch a, .drawer-lang a { display: inline-block; padding: 4px 6px; min-height: 24px; box-sizing: border-box; }
+.social-icons a, .footer-social a { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; min-height: 24px; }
+
+/* Sticky contact bar must never cover content */
+@media (max-width: 768px) {
+  body:has(.sticky-cta-bar), body.has-sticky-cta { padding-bottom: 64px; }
+}
+
+/* Tap targets on touch layouts */
+@media (max-width: 768px) {
+  .footer-links a, .footer-col ul li a { display: inline-block; padding: 10px 0; min-height: var(--bs-tap-target); box-sizing: border-box; }
+  .lang-switch a, .drawer-lang a { display: inline-block; padding: 10px 12px; min-height: var(--bs-tap-target); box-sizing: border-box; line-height: 24px; }
+  .mobile-drawer li a, #mobileDrawer li a { display: block; padding: 12px 8px; min-height: var(--bs-tap-target); box-sizing: border-box; }
+  .menu-toggle, .mobile-menu-btn, #menuToggle, #drawerClose { min-width: var(--bs-tap-target); min-height: var(--bs-tap-target); }
+}
+
+/* Tables never force horizontal page scroll */
+@media (max-width: 640px) {
+  #content table, .price-table, .repair-page table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* RTL: keep numbers, contacts and prices left-to-right inside Hebrew text */
+[dir="rtl"] a[href^="tel:"], [dir="rtl"] a[href^="mailto:"], [dir="rtl"] bdi,
+[dir="rtl"] .price, [dir="rtl"] td.price, [dir="rtl"] .phone { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .faq-details summary::after { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .breadcrumbs, [dir="rtl"] .breadcrumb { text-align: right; }
+
+/* FAQ (details/summary: no JavaScript required, keyboard accessible) */
+.faq-section { max-width: var(--bs-content-width); margin: 0 auto; text-align: left; }
+[dir="rtl"] .faq-section { text-align: right; }
+.faq-details { background: #fff; border: 1px solid #ddd; border-radius: var(--bs-radius-sm); margin: 0 0 6px; }
+.faq-details summary { cursor: pointer; list-style: none; padding: 12px 16px; font-size: 15px; font-weight: 600; color: #333; min-height: var(--bs-tap-target); box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.faq-details summary::-webkit-details-marker { display: none; }
+.faq-details summary::after { content: "+"; font-size: 20px; color: var(--bs-color-accent-text); margin-left: auto; }
+.faq-details[open] summary::after { content: "\2212"; }
+.faq-details .faq-answer { padding: 0 16px 14px; color: #555; font-size: 14px; line-height: 1.6; }
+.faq-details .faq-answer p { margin: 0; text-align: inherit; max-width: none; }
+
+/* Colour contrast (WCAG AA): brand orange #e88800 is only 2.6:1 on white.
+   Inside light content areas the accent is darkened (5.7:1 on white); the dark
+   header/footer keep the original brand orange (6.9:1 on #1a1414). */
+main, .related-services, .faq-section, .breadcrumbs, .breadcrumb {
+  --primary: #9c5400;
+  --primary-dark: #7d4400;
+}
+.sticky-cta-bar .cta-whatsapp, .cta-whatsapp { background: #0b7f43; color: #fff; }
+.sticky-cta-bar .cta-telegram, .cta-telegram { background: #0077b3; color: #fff; }
+
+/* Breadcrumb grey (#888) is only 3.2:1 on the light page background */
+.breadcrumbs, .breadcrumb { color: #595959; }
+
+/* Touch targets: icon-only and text links were 15-29px tall */
+@media (max-width: 768px) {
+  .social-icons a, .footer-social a { display: inline-flex; align-items: center; justify-content: center; min-width: var(--bs-tap-target); min-height: var(--bs-tap-target); }
+  .header-phone a { display: inline-block; padding: 12px 0; min-height: var(--bs-tap-target); box-sizing: border-box; }
+  .breadcrumbs a, .breadcrumb a { display: inline-block; padding: 12px 6px; min-height: var(--bs-tap-target); box-sizing: border-box; }
+  .lang-switch a, .drawer-lang a { min-width: var(--bs-tap-target); text-align: center; }
+}
+/* Logo is a clickable block on several templates; show it is interactive and focusable */
+.logo[role="link"] { cursor: pointer; }
+
+/* Consent banner (only rendered when analytics IDs are configured) */
+#bs-consent { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 10001; background: #1a1414; color: #fff; padding: 14px 16px; border-radius: var(--bs-radius); box-shadow: var(--bs-shadow); display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; max-width: 720px; margin: 0 auto; }
+#bs-consent p { margin: 0; font-size: 14px; line-height: 1.5; flex: 1 1 260px; }
+#bs-consent button { min-height: var(--bs-tap-target); padding: 8px 18px; border-radius: var(--bs-radius-sm); border: 2px solid #fff; background: transparent; color: #fff; font-weight: 700; cursor: pointer; }
+#bs-consent button[data-v="granted"] { background: #fff; color: #1a1414; }
+[hidden] { display: none !important; }
+
+/* Contrast fixes found by the in-browser audit */
+.header-content, .block-1 { --primary: #9c5400; --primary-dark: #7d4400; }   /* cards sit outside <main> on translated homepages */
+.drawer-lang { color: #bbb; }                                               /* "|" separators on the dark drawer */
+.header .logo { color: var(--bs-color-accent-text); }                       /* light header on the EN flower template */
+footer .footer-bottom p { color: #b5b5b5; }

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>אינסטלטור בקוה פנגן | BroService</title>
     <meta name="description" content="ברזים דולפים, סתימות, צנרת פרוצה ותיקוני אמבטיה בכל רחבי קוה פנגן.">
-    <link rel="icon" href="../../he/assets/images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    <link rel="preload" href="../../assets/fonts/inter-latin-1ab1ad.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/open-sans-latin-2808bc.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
     <link rel="canonical" href="https://broservice.in.th/he/plumber-koh-phangan/">
     <meta property="og:title" content="אינסטלטור בקוה פנגן | BroService">
     <meta property="og:description" content="ברזים דולפים, סתימות, צנרת פרוצה ותיקוני אמבטיה בכל רחבי קוה פנגן.">
@@ -17,150 +18,81 @@
     <meta property="og:site_name" content="BroService.in.th">
     <meta property="og:locale" content="he_IL">
     <meta property="og:image" content="https://broservice.in.th/assets/images/plumber.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="533">
+    <meta property="og:image:alt" content="אינסטלטור בקוה פנגן">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="אינסטלטור בקוה פנגן | BroService">
     <meta name="twitter:description" content="ברזים דולפים, סתימות, צנרת פרוצה ותיקוני אמבטיה בכל רחבי קוה פנגן.">
     <meta name="twitter:image" content="https://broservice.in.th/assets/images/plumber.jpg">
+    <meta name="twitter:image:alt" content="אינסטלטור בקוה פנגן">
     <link rel="alternate" hreflang="en" href="https://broservice.in.th/plumber-koh-phangan/">
-    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/plumber-koh-phangan/">
     <link rel="alternate" hreflang="ru" href="https://broservice.in.th/ru/plumber-koh-phangan/">
     <link rel="alternate" hreflang="th" href="https://broservice.in.th/th/plumber-koh-phangan/">
     <link rel="alternate" hreflang="he" href="https://broservice.in.th/he/plumber-koh-phangan/">
-    <style>
-:root {
-    --primary: #e88800;
-    --primary-dark: #c47000;
-    --dark: #1a1414;
-    --dark2: #2b2424;
-    --darker: #1f1919;
-    --bg: #edeef0;
-    --text-light: #8f8b8c;
-    --white: #fff;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #000; background: var(--dark); line-height: 1.65; font-size: 16px; }
-.container { max-width: 960px; margin: 0 auto; padding: 0 15px; }
-a { text-decoration: none; color: var(--primary); }
-a:hover { text-decoration: underline; }
-header { background: linear-gradient(180deg, var(--dark2), var(--darker)); padding: 4px 0 0; position: sticky; top: 0; z-index: 100; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 0 2px; }
-.logo { font-family: Inter, sans-serif; font-size: 22px; font-weight: 700; color: var(--primary); text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
-.logo span { color: #d3d3d3; font-weight: 300; }
-.header-right { display: flex; align-items: center; gap: 8px; }
-.header-phone { font-size: 16px; font-weight: bold; }
-.header-phone a { color: #e88800; font-weight: bold; }
-.social-icons { display: flex; gap: 3px; }
-.social-icons a { display: inline-block; transition: opacity 0.2s; }
-.social-icons a:hover { opacity: 0.7; }
-.social-icons svg { width: 22px; height: 22px; border-radius: 50%; display: block; }
-nav { background: linear-gradient(180deg, #e57c00, #c47000); border-radius: 6px 6px 0 0; margin-top: 4px; }
-ul.menu { display: flex; justify-content: center; flex-wrap: nowrap; list-style: none; padding: 4px 4px; }
-ul.menu li { display: inline-block; line-height: 16px; margin: 2px 1px; padding: 4px 6px; border-radius: 5px; transition: background 0.2s; }
-ul.menu li:hover { background: rgba(0,0,0,0.08); }
-ul.menu li a { font-size: 13px; line-height: 16px; color: #1f1919; font-weight: 600; white-space: nowrap; }
-ul.menu li a:hover { color: #fff; }
-ul.menu li.active { background: rgba(0,0,0,0.1); }
-ul.menu li.active a { color: #fff; }
-.breadcrumbs { background: var(--bg); padding: 6px 0; font-size: 13px; color: #888; }
-.breadcrumbs a { color: var(--primary); }
-#content { background: var(--bg); padding: 20px 0 25px; text-align: center; }
-#content p, #content li, #content .justifyfull { text-align: left; max-width: 700px; margin: 10px auto; }
-#content ul { display: inline-block; text-align: left; max-width: 600px; padding-left: 35px; }
-#content h1 { font-family: Inter, sans-serif; font-size: 28px; font-weight: 700; color: #1f1919; margin-bottom: 14px; }
-#content h2 { font-family: Inter, sans-serif; font-size: 22px; font-weight: 600; color: #1f1919; margin: 18px 0 8px; border-left: 4px solid var(--primary); padding-left: 12px; text-align: center; }
-#content h3 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; color: var(--primary); margin: 16px 0 6px; text-align: center; }
-#content p { margin: 10px 0; color: #444; line-height: 1.65; }
-#content .justifyfull { text-align: justify; }
-#content ul { margin: 10px 0 16px; padding-left: 20px; list-style: none; }
-#content ul li { margin: 5px 0; padding-left: 20px; position: relative; }
-#content ul li::before { content: '•'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
-#content table { margin: 15px auto !important; }
-#content .faq-item { text-align: left; max-width: 700px; margin: 0 auto; }
-.float-img { float: right; margin: 0 0 15px 20px; border-radius: 8px; max-width: 40%; }
-img { max-width: 100%; height: auto; border-radius: 7px; }
-#content img { max-width: 100%; height: auto; max-height: 400px; object-fit: contain; }
-.cta-block { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); padding: 24px 20px; border-radius: 10px; text-align: center; margin: 20px 0; }
-.cta-block h2 { color: var(--white) !important; font-size: 24px !important; border: none !important; padding: 0 !important; margin-bottom: 10px !important; }
-.cta-block .phone { font-size: 28px; font-weight: 700; margin: 10px 0; }
-.cta-block .phone a { color: var(--white); }
-.cta-block .hours { font-size: 14px; opacity: 0.9; }
-.usp-bar { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; background:#fff; padding:12px 15px; margin:0; border-bottom:3px solid var(--primary); font-size:13px; color:#333; font-weight:600; }
-.usp-bar span { display:flex; align-items:center; gap:6px; white-space:nowrap; }
-.related-services { max-width:960px; margin:0 auto; padding:25px 15px; background:var(--bg); }
-.related-services h2 { font-family: Inter, sans-serif; font-size:20px; font-weight:600; color:#1f1919; text-align:center; margin-bottom:14px; }
-.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.related-grid a { display:block; background:#fff; border-radius:8px; padding:16px 10px; text-align:center; box-shadow:0 1px 4px rgba(0,0,0,0.08); color:#1f1919; font-weight:600; font-size:14px; transition:transform .15s; }
-.related-grid a:hover { transform:translateY(-3px); text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.12); }
-.related-grid .emoji { display:block; font-size:26px; margin-bottom:6px; }
-footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
-.footer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-bottom: 20px; }
-.footer-col h4 { font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
-.footer-col p { font-size: 13px; line-height: 1.5; color: #aaa; }
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 6px; }
-.footer-links a { font-size: 13px; color: #aaa; }
-.footer-links a:hover { color: var(--primary); }
-.footer-social { display: flex; gap: 6px; margin-top: 10px; }
-.footer-social a:hover { opacity: 0.7; }
-.footer-social svg { width: 22px; height: 22px; border-radius: 50%; }
-.footer-bottom { border-top: 1px solid #333; padding-top: 15px; text-align: center; font-size: 13px; color: #888; }
-.footer-bottom a { color: var(--primary); }
-.menu-toggle { display:none; }
-.mobile-drawer, .drawer-overlay { display:none; }
-.sticky-cta-bar { display:none; }
-@media only screen and (max-width: 768px) {
-    nav { display:none; }
-    .menu-toggle { display:flex; align-items:center; justify-content:center; background:none; border:none; color:#fff; font-size:26px; cursor:pointer; padding:4px 8px; }
-    .drawer-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:299; }
-    .drawer-overlay.open { display:block; }
-    .mobile-drawer { display:block; position:fixed; top:0; left:-82%; width:78%; max-width:320px; height:100%; background:var(--darker); z-index:300; transition:left .25s ease; box-shadow:-4px 0 18px rgba(0,0,0,0.35); overflow-y:auto; }
-    .mobile-drawer.open { left:0; }
-    .drawer-close { text-align:right; padding:14px 18px 0; }
-    .drawer-close button { background:none; border:none; color:#fff; font-size:30px; cursor:pointer; line-height:1; }
-    .mobile-drawer ul { list-style:none; padding:6px 22px 24px; margin:0; }
-    .mobile-drawer ul li { padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.09); }
-    .mobile-drawer ul li a { color:#fff; font-size:16px; font-weight:600; display:block; }
-    .mobile-drawer ul li.active a { color:var(--primary); }
-    .mobile-drawer .drawer-lang { padding:16px 22px; display:flex; gap:14px; font-size:14px; }
-    .mobile-drawer .drawer-lang a { color:#aaa; font-weight:600; }
-    .mobile-drawer .drawer-lang a.active-lang { color:var(--primary); }
-    .header-right { flex-direction: column; gap: 5px; }
-    #content h1 { font-size: 22px; }
-    #content h2 { font-size: 18px; }
-    .float-img { float: none; margin: 0 auto 15px; max-width: 100%; }
-    .footer-grid { grid-template-columns: 1fr; padding: 0 15px; gap: 10px; }
-    .header-inner { flex-direction: column; text-align: center; }
-    .usp-bar { font-size:11px; gap:6px 12px; padding:8px 10px; }
-    .related-grid { grid-template-columns:1fr 1fr; }
-    .sticky-cta-bar { display:flex; position:fixed; bottom:0; left:0; right:0; z-index:200; box-shadow:0 -2px 12px rgba(0,0,0,0.18); }
-    .sticky-cta-bar a { flex:1; text-align:center; padding:13px 0; font-size:14px; font-weight:700; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px; }
-    .sticky-cta-bar .cta-whatsapp { background:#25D366; color:#fff; }
-    .sticky-cta-bar .cta-telegram { background:#0088cc; color:#fff; }
-    body { padding-bottom: 52px; }
-}
-</style>
+    <link rel="alternate" hreflang="x-default" href="https://broservice.in.th/plumber-koh-phangan/">
+    <link rel="stylesheet" href="../../assets/css/tpl-c699d54e.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "BroService.in.th",
+  "@id": "https://broservice.in.th/#localbusiness",
+  "name": "BroService",
+  "url": "https://broservice.in.th/",
   "telephone": "+66808705704",
-  "url": "https://broservice.in.th/he/plumber-koh-phangan/",
+  "email": "info@broservice.in.th",
   "areaServed": [
-    "Thong Sala",
-    "Srithanu",
-    "Haad Rin",
-    "Chaloklum",
-    "Baan Tai",
-    "Koh Phangan"
+    {
+      "@type": "Place",
+      "name": "Koh Phangan"
+    },
+    {
+      "@type": "Place",
+      "name": "Thong Sala"
+    },
+    {
+      "@type": "Place",
+      "name": "Srithanu"
+    },
+    {
+      "@type": "Place",
+      "name": "Haad Rin"
+    },
+    {
+      "@type": "Place",
+      "name": "Baan Tai"
+    },
+    {
+      "@type": "Place",
+      "name": "Chaloklum"
+    }
   ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Koh Phangan",
     "addressRegion": "Surat Thani",
     "addressCountry": "TH"
-  }
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+        "https://schema.org/Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://facebook.com/broservice.kohphangan",
+    "https://instagram.com/broservice_kohphangan"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -191,6 +123,30 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
         "@type": "Answer",
         "text": "כן, אנחנו מטפלים בשדרוג אביזרי אמבטיה כחלק מעבודות שיפוץ."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "אפשר לשלוח תמונות או סרטון של הבעיה?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "כן. תמונות או סרטון קצר בוואטסאפ או בטלגרם עוזרים לנו להבין את הבעיה ולעיתים קרובות מאפשרים אבחון טלפוני טוב יותר לפני ההגעה."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "מה כדאי לעשות בזמן שמחכים לאינסטלטור?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "אם יש נזילה, סגרו את שסתום הניתוק הקרוב או את אספקת המים הראשית אם אפשר, והרחיקו חפצים מהאזור הרטוב."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "הניקוז שלי נסתם שוב ושוב. זה תיקון חד-פעמי?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "זה תלוי בסיבה. סתימה חד-פעמית נפתחת מהר, אבל סתימות חוזרות עלולות להצביע על בעיה עמוקה יותר בצינור, שקל יותר להעריך באתר."
+      }
     }
   ]
 }
@@ -203,8 +159,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Services",
-      "item": "https://broservice.in.th/"
+      "name": "שירותים",
+      "item": "https://broservice.in.th/he/"
     },
     {
       "@type": "ListItem",
@@ -214,21 +170,23 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     }
   ]
 }
-</script>
+</script><link rel="stylesheet" href="../../assets/css/common.css">
+<noscript><link rel="stylesheet" href="../../assets/css/noscript.css"></noscript>
 </head>
 <body>
+<a class="skip-link" href="#content">דלג לתוכן</a>
     <header>
         <div class="container">
             <div class="header-inner">
-                <div class="logo" onclick="window.location='../../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
+                <div class="logo" onclick="window.location='../'" style="cursor:pointer;"><span>Bro</span>Service.in.th</div>
                 <div class="header-right">
                     <div class="header-phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
                     <div class="social-icons">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
             </div>
@@ -237,11 +195,11 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
             <div class="mobile-drawer" id="mobileDrawer">
                 <div class="drawer-close"><button id="drawerClose" aria-label="Close">×</button></div>
                 <ul><li><a href="../../he/">🏠 שירותים</a></li><li><a href="../../he/water-delivery-koh-phangan/">🚰 מים</a></li><li><a href="../../he/bike-service-koh-phangan/">🛵 אופנוע</a></li><li><a href="../../he/cleaning-koh-phangan/">🧹 ניקיון</a></li><li><a href="../../he/ac-service-koh-phangan/">❄️ מיזוג</a></li><li class="active"><a href="../../he/plumber-koh-phangan/">🔧 אינסטלטור</a></li><li><a href="../../he/electrician-koh-phangan/">⚡ חשמלאי</a></li><li><a href="../../he/handyman-koh-phangan/">🔨 הנדימן</a></li><li><a href="../../he/contacts/">✉️ צור קשר</a></li></ul>
-                <div class="drawer-lang"><a href="../../he/plumber-koh-phangan/">EN</a><a href="../../../ru/plumber-koh-phangan/">RU</a><a href="../../../th/plumber-koh-phangan/">TH</a><a href="../../he/plumber-koh-phangan/" class="active-lang">HE</a></div>
+                <div class="drawer-lang"><a href="../../plumber-koh-phangan/">EN</a><a href="../../ru/plumber-koh-phangan/">RU</a><a href="../../th/plumber-koh-phangan/">TH</a><a href="./" class="active-lang">HE</a></div>
             </div>
-            <nav><ul class="menu"><li><a href="../../">🏠 שירותים</a></li><li><a href="../../he/water-delivery-koh-phangan/">🚰 מים</a></li><li><a href="../../he/bike-service-koh-phangan/">🛵 אופנוע</a></li><li><a href="../../he/cleaning-koh-phangan/">🧹 ניקיון</a></li><li><a href="../../he/ac-service-koh-phangan/">❄️ מיזוג</a></li><li class="active"><a href="../../he/plumber-koh-phangan/">🔧 אינסטלטור</a></li><li><a href="../../he/electrician-koh-phangan/">⚡ חשמלאי</a></li><li><a href="../../he/handyman-koh-phangan/">🔨 הנדימן</a></li><li><a href="../../he/contacts/">✉️ צור קשר</a></li></ul></nav>
+            <nav><ul class="menu"><li><a href="../">🏠 שירותים</a></li><li><a href="../../he/water-delivery-koh-phangan/">🚰 מים</a></li><li><a href="../../he/bike-service-koh-phangan/">🛵 אופנוע</a></li><li><a href="../../he/cleaning-koh-phangan/">🧹 ניקיון</a></li><li><a href="../../he/ac-service-koh-phangan/">❄️ מיזוג</a></li><li class="active"><a href="../../he/plumber-koh-phangan/">🔧 אינסטלטור</a></li><li><a href="../../he/electrician-koh-phangan/">⚡ חשמלאי</a></li><li><a href="../../he/handyman-koh-phangan/">🔨 הנדימן</a></li><li><a href="../../he/contacts/">✉️ צור קשר</a></li></ul></nav>
         </div>
-    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../../plumber-koh-phangan/">EN</a> <a href="../../../ru/plumber-koh-phangan/">RU</a> <a href="../../../th/plumber-koh-phangan/">TH</a> <a href="../../../he/plumber-koh-phangan/">HE</a></div>
+    <div class="lang-switch" style="text-align:center;padding:5px;font-size:12px;"><a href="../../plumber-koh-phangan/">EN</a> <a href="../../ru/plumber-koh-phangan/">RU</a> <a href="../../th/plumber-koh-phangan/">TH</a> <a href="./">HE</a></div>
     </header>
     <div class="usp-bar">
         <span>⚡ מענה באותו יום</span>
@@ -254,29 +212,58 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </div>
     <div class="service-hero">
         <div class="container">
-            <img loading="lazy" width="800" height="533" src="../../assets/images/plumber.jpg" alt="אינסטלטור בקוה פנגן">
+            <picture><source type="image/webp" srcset="../../assets/images/plumber-400.webp 400w, ../../assets/images/plumber.webp 800w" sizes="(max-width: 800px) 100vw, 800px"><img fetchpriority="high" decoding="async" width="800" height="533" src="../../assets/images/plumber.jpg" alt="איור: צינור ומפתח ברגים"></picture>
         </div>
     </div>
-    <section id="content"><div class="container">
+    <main id="content"><div class="container">
     <h1>🔧 אינסטלטור בקוה פנגן</h1>
-    <div style="background:#f8f6f0;border-left:4px solid #e88800;padding:16px;margin:20px 0;border-radius:4px;"><strong>לאינסטלציה באי יש מאפיינים משלה — אוויר ימי מלוח, מים קשים, צנרת ישנה בבתי כפר הדייגים צ'לוקלום לעומת בנייה חדשה בסריתאנו.</strong></div>
+    <div style="background:#f8f6f0;border-left:4px solid #9c5400;padding:16px;margin:20px 0;border-radius:4px;"><strong>לאינסטלציה באי יש מאפיינים משלה — אוויר ימי מלוח, מים קשים, צנרת ישנה בבתי כפר הדייגים צ'לוקלום לעומת בנייה חדשה בסריתאנו.</strong></div>
     <h2>מה כלול</h2>
     <ul>
-        <li>תיקון דליפות וסתימות בכל אביזר</li>
-        <li>החלפת צנרת — מחלידה או פרוצה</li>
-        <li>אבחון לחץ מים</li>
-        <li>בדיקות מונעות לוילות ונכסים להשכרה</li>
+        <li><strong>תיקון ברזים</strong> — טיפול בדליפות וטפטופים</li>
+        <li><strong>פתיחת סתימות</strong> — כיורים, מקלחות ואסלות סתומים</li>
+        <li><strong>תיקון צנרת</strong> — תיקון או החלפה של צינורות מחלידים או פרוצים</li>
+        <li><strong>שירות לדודי מים</strong> — התקנה, תיקון, שטיפת משקעים</li>
+        <li><strong>שיפוץ חדר אמבטיה</strong> — שדרוג מלא של האביזרים</li>
+        <li><strong>קריאות חירום</strong> — תגובה מהירה לדליפות דחופות</li>
     </ul>
     <h2>איך זה עובד</h2>
     <ol style="max-width:600px;margin:10px auto 16px;text-align:left;padding-left:20px;">
-        <li style="margin:5px 0;">כתבו או התקשרו — ספרו לנו מה קורה.</li>
-        <li style="margin:5px 0;">נותנים אבחון טלפוני והצעת מחיר הוגנת.</li>
-        <li style="margin:5px 0;">מגיעים, מבצעים את העבודה, ועומדים מאחוריה עם אחריות.</li>
+        <li style="margin:5px 0;"><strong>התקשרו</strong> — תארו את התקלה בטלפון, ב-WhatsApp או ב-Telegram</li>
+        <li style="margin:5px 0;"><strong>אבחון טלפוני</strong> — לרוב אנחנו מזהים את הגורם הסביר עוד לפני ההגעה</li>
+        <li style="margin:5px 0;"><strong>הצעת מחיר</strong> — הערכת מחיר ברורה לפני תחילת העבודה</li>
+        <li style="margin:5px 0;"><strong>תיקון</strong> — העבודה מבוצעת עם חלקים איכותיים</li>
+        <li style="margin:5px 0;"><strong>אחריות</strong> — אחריות על כל העבודות</li>
     </ol>
     <p class="justifyfull">אנחנו מטפלים בכל בעיות האינסטלציה בקוה פנגן: ברזים דולפים, ניקוזים סתומים, צנרת פרוצה או מחלידה, בעיות לחץ מים, ותיקון או שדרוג מלא של אביזרי אמבטיה. אנחנו פועלים בתונג סאלה, סריתאנו, האד רין, צ'לוקלום ובאן טאי, ובדרך כלל יכולים לתת אבחנה טלפונית לפני שאנחנו מגיעים.</p>
     <p class="justifyfull">עבור בעלי וילות ומנהלי נכסים, אנחנו גם מבצעים בדיקות מונעות — תפיסת דליפה איטית לפני שהיא הופכת לתיקון קיר, או שטיפת משקעים ממחמם מים שמאבד יעילות.</p>
     <p class="justifyfull">רוב הקריאות באזור תונג סאלה וסריתאנו הן באותו יום; לאזורים מרוחקים יותר ניתן חלון זמן ריאלי כשאתם מתקשרים.</p>
+    <h2>💰 מחירים</h2>
+    <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
+            <thead><tr style="background:var(--primary);color:#fff;"><th style="padding:10px 12px;text-align:left;">שירות</th><th style="padding:10px 12px;text-align:left;">מחיר</th><th style="padding:10px 12px;text-align:left;">פרטים</th></tr></thead>
+            <tbody>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">תיקון ברז</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);"><bdi>฿300-500</bdi></td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">לכל אביזר</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">פתיחת סתימה</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);"><bdi>฿400-800</bdi></td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">לכל ניקוז</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">תיקון צנרת</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);"><bdi>฿500-1,500</bdi></td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">תלוי בהיקף העבודה</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">שירות לדוד מים</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);"><bdi>฿600-1,200</bdi></td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">שטיפה או תיקון</td></tr>
+                <tr><td style="padding:8px 12px;border-bottom:1px solid #ddd;">שיפוץ חדר אמבטיה</td><td style="padding:8px 12px;border-bottom:1px solid #ddd;font-weight:600;color:var(--primary);"><bdi>החל מ-฿15,000</bdi></td><td style="padding:8px 12px;border-bottom:1px solid #ddd;">שיפוץ מלא</td></tr>
+            </tbody>
+        </table>
+    </div>
+<p class="price-note" style="font-size:13px;color:#595959;text-align:center;margin:4px 0 14px;">מחירים משוערים בבהט תאילנדי (฿). המחיר הסופי תלוי בעבודה ומוסכם איתכם מראש. עודכן לאחרונה ב-17 בנובמבר 2026.</p>
+
+    <h2>✅ למה לבחור ב-BroService?</h2>
+    <ul>
+        <li><strong>אבחון טלפוני</strong> — לרוב מזהים את התקלה לפני ההגעה</li>
+        <li><strong>בדיקות מונעות</strong> — תופסים דליפות קטנות לפני שהן הופכות לתיקונים גדולים</li>
+        <li><strong>מחירים הוגנים</strong> — הצעת מחיר ברורה לפני שמתחילים בעבודה</li>
+        <li><strong>אחריות כלולה</strong> — כל העבודות מכוסות</li>
+        <li><strong>בכל האי</strong> — מכסים את כל אזורי קוה פנגן</li>
+    </ul>
+
     <h2>אזורי כיסוי וזמן תגובה</h2>
+    <p class="justifyfull">אנחנו פועלים בכל קוה פנגן: <strong>תונג סאלה</strong>, <strong>סריתאנו</strong>, <strong>האד רין</strong>, <strong>צ'לוקלום</strong>, <strong>באן טאי</strong> והאזורים הסמוכים.</p>
     <div style="overflow-x:auto;">
         <table style="width:100%;border-collapse:collapse;margin:15px 0;background:#fff;border-radius:8px;overflow:hidden;">
             <thead><tr style="background:var(--primary);color:#fff;"><th style="padding:10px 12px;text-align:left;">אזור</th><th style="padding:10px 12px;text-align:left;">זמן תגובה טיפוסי</th></tr></thead>
@@ -288,21 +275,58 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
             </tbody>
         </table>
     </div>
-    <h2 style="font-size:22px;font-weight:600;color:#1f1919;margin:18px 0 8px;border-left:4px solid #e88800;padding-left:12px;text-align:center;">❓ שאלות נפוצות</h2>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">אתם מטפלים בדליפות חירום?</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">כן, התקשרו או כתבו בוואטסאפ ואנחנו ניתן חלון זמן הגעה ריאלי בהתאם למיקום שלכם.</div></div>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">אתם מתקנים דודי מים?</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">כן, כולל שטיפת משקעים והחלפה מלאה אם צריך.</div></div>
-<div class="faq-item"><button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'||!this.nextElementSibling.style.display?'block':'none'" style="width:100%;text-align:left;background:#fff;border:1px solid #ddd;padding:12px 16px;border-radius:6px;cursor:pointer;font-size:15px;font-weight:600;color:#333;margin-bottom:4px;">אתם עובדים על שיפוצי וילות?</button>
-<div style="display:none;padding:12px 16px;background:#fff;border:1px solid #ddd;border-top:0;border-radius:0 0 6px 6px;margin-bottom:4px;color:#555;font-size:14px;">כן, אנחנו מטפלים בשדרוג אביזרי אמבטיה כחלק מעבודות שיפוץ.</div></div>
+    <h2>מה כולל ביקור אינסטלטור בדרך כלל</h2>
+    <p class="justifyfull">ביקור מתחיל בדרך כלל באיתור מקור הבעיה, אחר כך מתקנים או מחליפים את החלק התקול, ולבסוף בודקים שהמים זורמים, מתנקזים ונסגרים כמו שצריך. בברז מטפטף זה יכול להיות מחסנית או אטם חדשים; בסתימה — פתיחת הניקוז ובדיקה שהמים זורמים בחופשיות; בצינור — חיתוך הקטע הפגוע וחיבור צינור חדש במקומו. אם אי אפשר להציל אביזר או דוד, אפשר לדבר איתכם על אפשרויות החלפה.</p>
+
+    <h2>מי צריך אינסטלטור בקוה פנגן</h2>
+    <ul>
+<li><strong>בעלי וילות ובתים</strong> — דליפות, לחץ מים נמוך או ניקוז איטי, במיוחד בבתים ישנים שבהם האוויר המלוח והמים הקשים בלו את האביזרים.</li>
+<li><strong>מנהלי נכסים להשכרה</strong> — הכנת הנכס בין אורחים, כשצריך לתקן מהר מיכל הדחה שמטפטף או ברז דולף.</li>
+<li><strong>תושבים לטווח ארוך ושוכרים</strong> — שרוצים לדווח לבעל הבית על תקלה כשברור להם מה מקולקל.</li>
+<li><strong>בעלי בנייה חדשה</strong> — להתקנת אביזרים, חיבור דוד מים או בדיקה לפני שאורחים או דיירים נכנסים.</li>
+</ul>
+
+    <h2>איך להתכונן לפני הביקור</h2>
+    <ul>
+<li>רשמו איפה הבעיה, מתי היא התחילה והאם היא קבועה או מופיעה רק בשימוש בברז או במכשיר מסוים.</li>
+<li>שלחו סרטון קצר או כמה תמונות בוואטסאפ או בטלגרם — זה לעיתים קרובות עוזר באבחון הטלפוני.</li>
+<li>אם יש נזילה, סגרו את שסתום הניתוק הקרוב או את הברז הראשי, אם אתם יודעים איפה הוא.</li>
+<li>פנו את האזור מתחת לכיורים ומסביב לאסלה או לדוד המים כדי שהאינסטלטור יוכל להגיע לצנרת.</li>
+<li>ודאו שיש מי שיכניס את בעל המקצוע לנכס, וציינו את הדגם או הגיל של הדוד אם ידועים.</li>
+</ul>
+
+    <h2>מה משפיע על המחיר הסופי</h2>
+    <p class="justifyfull">המחיר תלוי בסוג העבודה ובכמה גורמים מעשיים, ולכן ניתנת הצעת מחיר ברורה לפני תחילת העבודה:</p>
+<ul>
+<li>עד כמה קל להגיע לצינור או לאביזר — למשל אם הוא מאחורי קיר מחופה באריחים או מתחת לרצפה;</li>
+<li>מצב וחומר הצנרת והחיבורים הקיימים;</li>
+<li>מספר האביזרים או נקודות הניקוז המעורבים;</li>
+<li>החלקים הנדרשים, והאם אפשר לתקן חלק או שצריך להחליף אותו;</li>
+<li>המרחק למיקום שלכם באי ודחיפות הקריאה.</li>
+</ul>
+
+    <h2>מתי צריך בעל מקצוע אחר או ביקור באתר</h2>
+    <p class="justifyfull">את רוב הדליפות, הסתימות ותקלות האביזרים אינסטלטור יכול לטפל, אבל יש מצבים שדורשים בדיקה מקרוב. אם הסיבה לא ברורה מתמונות ומתיאור טלפוני, ביקור באתר הוא בדרך כלל הדרך האמינה היחידה לתת הצעת מחיר מדויקת. כתמי רטיבות מתמשכים, ניקוז שנסתם שוב ושוב או לחץ מים נמוך בכל הבית עשויים להצביע על תקלה נסתרת בצינור או על בעיה באספקת המים עצמה. אם העניין נוגע לחיווט ליד דוד מים או משאבה, חשמלאי צריך לבדוק אותו; ואם המים כבר פגעו בקירות, בתקרות או באריחים, ייתכן שיידרש הנדימן או בנאי לתיקון שלאחר מכן.</p>
+
+    <h2 style="font-size:22px;font-weight:600;color:#1f1919;margin:18px 0 8px;border-left:4px solid #9c5400;padding-left:12px;text-align:center;">❓ שאלות נפוצות</h2>
+<div class="faq-section">
+<details class="faq-details"><summary>אתם מטפלים בדליפות חירום?</summary><div class="faq-answer"><p>כן, התקשרו או כתבו בוואטסאפ ואנחנו ניתן חלון זמן הגעה ריאלי בהתאם למיקום שלכם.</p></div></details>
+<details class="faq-details"><summary>אתם מתקנים דודי מים?</summary><div class="faq-answer"><p>כן, כולל שטיפת משקעים והחלפה מלאה אם צריך.</p></div></details>
+<details class="faq-details"><summary>אתם עובדים על שיפוצי וילות?</summary><div class="faq-answer"><p>כן, אנחנו מטפלים בשדרוג אביזרי אמבטיה כחלק מעבודות שיפוץ.</p></div></details>
+<details class="faq-details"><summary>אפשר לשלוח תמונות או סרטון של הבעיה?</summary><div class="faq-answer"><p>כן. תמונות או סרטון קצר בוואטסאפ או בטלגרם עוזרים לנו להבין את הבעיה ולעיתים קרובות מאפשרים אבחון טלפוני טוב יותר לפני ההגעה.</p></div></details>
+<details class="faq-details"><summary>מה כדאי לעשות בזמן שמחכים לאינסטלטור?</summary><div class="faq-answer"><p>אם יש נזילה, סגרו את שסתום הניתוק הקרוב או את אספקת המים הראשית אם אפשר, והרחיקו חפצים מהאזור הרטוב.</p></div></details>
+<details class="faq-details"><summary>הניקוז שלי נסתם שוב ושוב. זה תיקון חד-פעמי?</summary><div class="faq-answer"><p>זה תלוי בסיבה. סתימה חד-פעמית נפתחת מהר, אבל סתימות חוזרות עלולות להצביע על בעיה עמוקה יותר בצינור, שקל יותר להעריך באתר.</p></div></details>
+</div>
+
+
 
     <div class="cta-block">
         <h2>📞 התקשר</h2>
         <div class="phone"><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></div>
         <div class="hours">⚡ פתוח 8:00–20:00</div>
-        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#25D366;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
+        <div style="margin-top:10px;"><a href="https://wa.me/+66808705704" style="color:#fff;background:#0b7f43;padding:10px 24px;border-radius:6px;display:inline-block;font-weight:600;text-decoration:none;">💬 WhatsApp</a></div>
     </div>
-    </div></section>
+    </div></main>
     <div class="related-services">
         <h2>🏠 שירותים</h2>
         <div class="related-grid">
@@ -313,18 +337,18 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>BroService.in.th</h4>
+                    <h4 role="heading" aria-level="3">BroService.in.th</h4>
                     <p>צוות השירותים המקומי שלכם בקוה פנגן.</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/+66808705704" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
-<a href="https://t.me/BroService_kpg_bot" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
-<a href="https://line.me/ti/p/@broservice" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
-<a href="https://facebook.com/broservice.kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
-<a href="https://instagram.com/broservice_kohphangan" target="_blank"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
+                        <a href="https://wa.me/+66808705704" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#FFF" d="M10 16c0 3.3 2.7 6 6 6c1.3 0 2.6-.4 3.7-1.1l2.1 1.1l-.8-2.1c.6-1 .9-2.1.9-3.2c0-3.3-2.7-6-6-6s-6 2.7-6 6zm9.1 3.3l-.5-.3c-1-.5-1.8-.4-2.5.2l-.4.3c-.5.4-.9.8-1.6.8c-.7 0-1.5-.5-2.2-1.2c-1.1-1-1.8-2.4-1.9-3.7c-.1-1.4.6-2.7 1.7-3.5l.4-.3c.7-.5.8-1.3.2-2.2l-.4-.7c-.5-.8-1.3-1.3-2.2-1.3c-1 0-1.8.6-2.3 1.3c-.8 1.1-1.2 2.5-1.2 3.9c0 3 1.6 5.7 4.1 7.2c2 1.2 4.4 1.8 6.8 1.5c1.3-.2 2.5-.7 3.6-1.5c.8-.6 1.5-1.4 2-2.3c.5-.9.6-1.9.3-2.9c-.3-.9-1-1.6-1.9-1.9c-.8-.3-1.6 0-2.3.5z"/></svg></a>
+<a href="https://t.me/BroService_kpg_bot" target="_blank" rel="noopener" aria-label="Telegram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><path fill="#FFF" d="M22.6 10.2l-2.8 13.3c-.2.9-.7 1.1-1.4.7l-3.9-2.9l-1.9 1.8c-.2.2-.4.4-.7.4l.3-4 7.2-6.5c.3-.3-.1-.5-.5-.2L12 18.4l-4-1.3c-.9-.3-.9-.9.2-1.3l15.6-6c.8-.3 1.5.2 1.2 1.3z"/></svg></a>
+<a href="https://line.me/ti/p/@broservice" target="_blank" rel="noopener" aria-label="LINE"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#00C300"/><path fill="#FFF" d="M23.4 12.5c-.3-1.7-1.7-3-3.4-3.3c-2.6-.5-5.3-.5-7.9 0c-1.7.3-3.1 1.6-3.4 3.3c-.5 2.6-.5 5.3 0 7.9c.3 1.7 1.7 3 3.4 3.3c2.6.5 5.3.5 7.9 0c1.7-.3 3.1-1.6 3.4-3.3c.5-2.6.5-5.3 0-7.9zm-4.8 5.9l-2.6 2.6c-.2.2-.5.2-.7 0l-2.6-2.6c-.6-.6-1-1.3-1-2.2c0-1.6 1.3-2.9 2.9-2.9c1.6 0 2.9 1.3 2.9 2.9c0 .9-.4 1.7-1 2.2z"/></svg></a>
+<a href="https://facebook.com/broservice.kohphangan" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#FFF" d="M21.8 11.2h-2.5c-1.4 0-1.7.7-1.7 1.6v2.1h3.3l-.4 3.3h-2.9v8.5h-3.4v-8.5h-2.8v-3.3h2.8v-2.5c0-2.8 1.7-4.3 4.2-4.3c1.2 0 2.2.1 2.5.2v2.9z"/></svg></a>
+<a href="https://instagram.com/broservice_kohphangan" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true" focusable="false" viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="#E4405F"/><path fill="#FFF" d="M20.5 11.5h-9c-2.5 0-4.5 2-4.5 4.5v9c0 2.5 2 4.5 4.5 4.5h9c2.5 0 4.5-2 4.5-4.5v-9c0-2.5-2-4.5-4.5-4.5zm-4.5 12c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm6-10.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>שירותים</h4>
+                    <h4 role="heading" aria-level="3">שירותים</h4>
                     <ul class="footer-links">
                         <li><a href="../../he/water-delivery-koh-phangan/">🚰 אספקת מים</a></li>
                         <li><a href="../../he/cleaning-koh-phangan/">🧹 ניקיון</a></li>
@@ -332,10 +356,13 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                         <li><a href="../../he/ac-service-koh-phangan/">❄️ שירות מיזוג אוויר</a></li>
                         <li><a href="../../he/electrician-koh-phangan/">⚡ חשמלאי</a></li>
                         <li><a href="../../he/bike-service-koh-phangan/">🛵 שירות אופנועים</a></li>
+                        <li><a href="../tikun-telefonim-koh-phangan/">📱 תיקון טלפונים ומכשירים</a></li>
+                        <li><a href="../flower-delivery-koh-phangan/">🌸 משלוח פרחים</a></li>
+                        <li><a href="../property-rental-koh-phangan/">🏠 השכרת נכסים</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>צור קשר</h4>
+                    <h4 role="heading" aria-level="3">צור קשר</h4>
                     <ul class="footer-links">
                         <li><a href="https://t.me/BroService_kpg_bot">✈️ @BroService_kpg_bot</a></li>
                         <li><a href="mailto:info@broservice.in.th">✉️ info@broservice.in.th</a></li>
@@ -344,17 +371,20 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>מידע</h4>
+                    <h4 role="heading" aria-level="3">מידע</h4>
                     <ul class="footer-links">
                         <li><a href="../../he/">שירותים</a></li>
                         <li><a href="../../he/contacts/">צור קשר</a></li>
-                        <li><a href="../../he/sitemap.xml" target="_blank">מפת האתר</a></li>
+                        <li><a href="../about/">אודות</a></li>
+                        <li><a href="../privacy/">פרטיות</a></li>
+                        <li><a href="../../sitemap.xml" target="_blank" rel="noopener">מפת האתר</a></li>
+                        <li><a href="#" data-consent-settings hidden></a></li>
                         <li><span style="color: #888;">⚡ פתוח 8:00–20:00</span></li>
                         <li><span style="color: #888;">🌴 קוה פנגן, תאילנד</span></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Areas</h4>
+                    <h4 role="heading" aria-level="3">Areas</h4>
                     <ul class="footer-links">
                         <li><a href="../../he/thong-sala-koh-phangan/">📍 Thong Sala</a></li>
                         <li><a href="../../he/srithanu-koh-phangan/">📍 Srithanu</a></li>
@@ -371,7 +401,7 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
     </footer>
     <div class="sticky-cta-bar" id="stickyCta">
     <a href="https://wa.me/+66808705704" class="cta-whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">📞 התקשר</a>
+    <a href="https://t.me/BroService_kpg_bot" class="cta-telegram">✈️ Telegram</a>
 </div>
 <script>
 (function(){
@@ -399,5 +429,8 @@ footer { background: var(--dark); color: #aaa; padding: 30px 0 20px; }
   drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
 })();
 </script>
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/consent-analytics.js" defer></script>
+<script src="../../assets/js/a11y.js" defer></script>
 </body>
 </html>
