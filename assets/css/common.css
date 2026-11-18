@@ -126,3 +126,6 @@ main, .related-services, .faq-section, .breadcrumbs, .breadcrumb {
 .drawer-lang { color: #bbb; }                                               /* "|" separators on the dark drawer */
 .header .logo { color: var(--bs-color-accent-text); }                       /* light header on the EN flower template */
 footer .footer-bottom p { color: #b5b5b5; }
+
+/* Old flower-page template: white-on-orange nav button was 2.64:1 */
+.cta-btn, nav a.cta-btn { background: var(--bs-color-accent-text) !important; color: #fff !important; }
